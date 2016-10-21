@@ -1,0 +1,191 @@
+// $rem-base:720;// 计算rem的基数，默认16根据字体大小，当值超过320的将根据设计稿宽度
+$reset:true; // 是否将浏览器默认样式重置，默认为false
+// $Response:true;// 是否使用自适应系统，默认为false
+// $mediaArrays:(320 375 400 480 640 720);// 当$Response为true的时候设置适配的手机尺寸，默认值为320 360 375 400 480 540 640 720
+@import "../../../_source/_function/mobile-mixin";
+@import "./sprites/cur";
+@import "./sprites/cur1";
+@import "./sprites/aqi-icon";
+// body{
+//  display: flex;
+// 	background: red;
+// }
+// .div1{
+// 	// 引用单个合图
+// 	@include rem-sprite($aqi-icon-lv2,720);
+// }
+// // 引用全部合图
+// @include rem-sprites($cur-sprites,$pre-name:'demo',$separator:'__');
+// h1{
+// 	text-align: center;
+// 	font-family: Microsoft Yahei, sans-serif;
+// 	// 字体大小可以用rem
+// 	font-size: rem-calc(60);
+// 	color: blue;
+// }
+// ul{
+// 	padding: 0;
+// 	list-style: none;
+// 	li{
+// 		float: left;
+// 		margin-right: rem-calc(10);
+// 	}
+// }
+// .div2{
+// 	width: rem-calc(200);
+// 	height: rem-calc(200);
+// 	background: yellow;
+// }
+.nav-wrap {
+    background-color: #2e2c2d;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 84px;
+    line-height: 84px;
+    font-size: 18px;
+    text-align: right;
+    font-family: Avenir Next, sans-serif;
+    position: relative;
+    label a {
+        color: #fdfbfb;
+        display: inline-block;
+        padding: 0 20px;
+    }
+}
+
+.video {
+    height: 100px;
+    background-color: navy;
+    margin-top: 84px;
+}
+
+.nav-logo {
+    display: inline-block;
+    @include rem-sprite($aqi-icon-lv2, 720);
+    position: absolute;
+    top: 50%;
+    margin-top: -0.59rem;
+    left: 40px;
+}
+
+.sec-nav,.n-products,.n-brand,.n-contant {
+    position: fixed;
+    top: 84px;
+    width: 100%;
+}
+.sec-nav .nav-mask {
+    background-color: #fff;
+    opacity: 0.5;
+    height: 100px;
+    line-height: 100px;
+}
+
+.slogan-mod {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 0 10px;
+    border: 3px solid #000;
+    text-align: center;
+    line-height: 2;
+    p {
+        font-size: 12px;
+    }
+}
+
+.product-mod {
+    text-align: center;
+    margin-bottom: 120px;
+    h2 {
+        margin-bottom: 32px;
+    }
+    .list-wrap {
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 1200px;
+        li {
+            float: left;
+            width: 25%;
+            margin: 30px 0;
+        }
+        label {
+            font-size: 16px;
+            color: #131212;
+        }
+    }
+    .p-detail {
+        height: 234px;
+        border-right: 1px solid #c9c9c9;
+        margin-bottom: 26px;
+        position: relative;
+        &.first {
+            border-left: 1px solid #c9c9c9;
+        }
+    }
+    .p-show {
+        z-index: 9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    .p-mask {
+        background-color: #000;
+        opacity: 0.5;
+        height: 234px;
+    }
+    .p-text {
+        position: absolute;
+        top: 0;
+        p {
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.6;
+            color: #eeeded;
+            padding: 30px;
+            height: 96px;
+        }
+    }
+    .viewmore {
+        width: 124px;
+        height: 46px;
+        line-height: 46px;
+        border: 2px #eeeded solid;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border-radius: 6px;
+        margin-bottom: 26px;
+    }
+}
+
+@media only screen and (min-width:910px) {
+    body {
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width:910px) {
+    body {
+        background-color: grey;
+    }
+}
+
+.footer {
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #b8b8b9;
+    background-color: #2e2d2d;
+    text-align: center;
+    font-family: Avenir Next, sans-serif;
+}

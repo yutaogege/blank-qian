@@ -1,0 +1,311 @@
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+}
+
+html * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  font-family: sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+em, i, strong {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+input, button, textarea, select {
+  font-size: 100%;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+a, button, input, select, textarea, a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 0 none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+::-moz-placeholder {
+  color: #999;
+}
+
+:-moz-placeholder {
+  color: #999;
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.nav-wrap {
+  background-color: #2e2c2d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 84px;
+  line-height: 84px;
+  font-size: 18px;
+  text-align: right;
+  font-family: Avenir Next, sans-serif;
+  position: relative;
+}
+
+.main-nav label a {
+  color: #fdfbfb;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.video {
+  height: 100px;
+  background-color: navy;
+  margin-top: 84px;
+}
+
+.nav-logo {
+  display: inline-block;
+  background-image: url(../images/aqi-icon-sprite.png);
+  background-size: 3.85185rem 3.85185rem;
+  background-position: 50% 0%;
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.59rem;
+  left: 40px;
+}
+
+.sec-nav, .n-products, .n-brand, .n-contant {
+  position: fixed;
+  top: 84px;
+  width: 100%;
+}
+
+.sec-nav .nav-mask {
+  background-color: #fff;
+  opacity: 0.5;
+  height: 100px;
+  line-height: 100px;
+}
+
+.slogan-mod {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px 0 10px;
+  border: 3px solid #000;
+  text-align: center;
+  line-height: 2;
+}
+
+.slogan-mod p {
+  font-size: 12px;
+}
+
+.product-mod {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.product-mod h2 {
+  margin-bottom: 32px;
+}
+
+.product-mod .list-wrap {
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.product-mod .list-wrap li {
+  float: left;
+  width: 25%;
+  margin: 30px 0;
+}
+
+.product-mod .list-wrap label {
+  font-size: 16px;
+  color: #131212;
+}
+
+.product-mod .p-detail {
+  height: 234px;
+  border-right: 1px solid #c9c9c9;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.product-mod .p-detail.first {
+  border-left: 1px solid #c9c9c9;
+}
+
+.product-mod .p-show {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.product-mod .p-mask {
+  background-color: #000;
+  opacity: 0.5;
+  height: 234px;
+}
+
+.product-mod .p-text {
+  position: absolute;
+  top: 0;
+}
+
+.product-mod .p-text p {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.6;
+  color: #eeeded;
+  padding: 30px;
+  height: 96px;
+}
+
+.product-mod .viewmore {
+  width: 124px;
+  height: 46px;
+  line-height: 46px;
+  border: 2px #eeeded solid;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  border-radius: 6px;
+  margin-bottom: 26px;
+}
+
+@media only screen and (min-width: 910px) {
+  body {
+    background-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  body {
+    background-color: grey;
+  }
+}
+
+.footer {
+  height: 100px;
+  line-height: 100px;
+  font-size: 18px;
+  color: #b8b8b9;
+  background-color: #2e2d2d;
+  text-align: center;
+  font-family: Avenir Next, sans-serif;
+}
+
+/*# sourceMappingURL=.map/style.css.map */

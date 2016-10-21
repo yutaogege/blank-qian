@@ -1,0 +1,88 @@
+extends ./layout/layout
+append head
+	title learn gulp
+	link(rel='stylesheet',href='css/style.css')
+block content
+	div.nav-wrap
+		div.main-nav
+			a.nav-logo(href="#")
+			label
+				a(href="#") HOME
+			label
+				a(href="#") PRODUCTS
+			label
+				a(href="#") BRAND
+			label
+				a(href="#") CONTANT
+	div.sec-nav
+		div.nav-mask
+		div.n-home
+		ul.n-products
+			li nav11111
+			li nav2222
+			li nav3333
+		ul.n-brand
+			li nav11111
+			li nav2222
+			li nav3333
+		div.n-contant
+	div.video
+	div.slogan-mod
+		h3 find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME
+		h2 'Blank' ME
+		p Find my beauty identity
+		p Fill my beauty style
+		p Feel the beautiful days
+	div.product-mod
+		h2 'PRODUCTS'
+		ul.list-wrap
+			li
+				div.p-detail.first
+					img(src='lv1.png')
+					div.p-show
+						div.p-mask
+						div.p-text
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							a.viewmore(href="#") VIEW MORE
+				label POEDER
+			li
+				div.p-detail
+					img(src='lv1.png')
+					div.p-show
+						div.p-mask
+						div.p-text
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							a.viewmore(href="#") VIEW MORE
+				label MASCARA
+			li
+				div.p-detail
+					img(src='lv1.png')
+					div.p-show
+						div.p-mask
+						div.p-text
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							a.viewmore(href="#") VIEW MORE
+				label POEDER
+			li
+				div.p-detail
+					img(src='lv1.png')
+					div.p-show
+						div.p-mask
+						div.p-text
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							a.viewmore(href="#") VIEW MORE
+				label MASCARA
+	//- h1 我是一个认真的dddddemo
+	//- h2 #{title}
+	//- p 单个图片的使用
+	//- div.div1
+	//- p 多个图片的使用
+	//- ul.clearfix
+		-for(var i=2;i<=7;i++){
+			li(class="demo__lv"+i)
+		-}
+
+	//- div.div2 我是不是很黄
+block script
+	script(src='./js/jquery-1.9.1.js')
+	script(src='./js/index.js')

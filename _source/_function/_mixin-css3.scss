@@ -1,0 +1,154 @@
+@charset "utf-8";
+//背景色透明
+@mixin opacityColor($color, $trans) {
+    $rgba: rgba($color, $trans);
+    background: $rgba;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#{ie-hex-str($rgba)}", EndColorStr="#{ie-hex-str($rgba)}");
+    .ie9 & {
+        filter: none;
+    }
+}
+
+//png24
+@mixin opacityImage($path) {
+    _background: none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="#{$path}");
+}
+
+//IE6下用gif背景图片
+@mixin opacityGif($path) {
+    _background-image: url("#{$path}");
+}
+
+//背景图片拉伸
+@mixin stretchedImage($path) {
+    background-size: 100% 100%;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="#{$path}", sizingMethod="scale");
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="#{$path}", sizingMethod="scale");
+}
+
+// 三角形
+@mixin triangle($direction, $size, $borderColor ) {
+  content:"";
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+}
+
+
+@mixin _border-width() {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        box-sizing: border-box;
+        transform: scale(.5);
+        transform-origin: 0 0;
+        @content;
+    }
+}
+// 1px边框线
+@mixin border-width($width:0px 0px 0px 0px, $radius:null, $color:null, $style:solid) {
+    @include _border-width() {
+        @if $width !=null {
+            border-width: $width;
+            @if $color !=null {
+                border-color: $color;
+            }
+            @if $radius !=null {
+                border-radius: $radius;
+            }
+            border-style: $style;
+            @content;
+        }
+    }
+}
+// Flexible Box
+@mixin display-flex($display) {
+    @include flexbox((display: box), 1);
+    @include flexbox((display: $display));
+}
+
+@mixin flex($values) {
+    @include flexbox((box-flex: $values), 1);
+    @include flexbox((flex: $values));
+}
+
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
+
+@mixin align-items($align-items) {
+    @if $align-items==flex-start {
+        @include flexbox((box-align: start), 1);
+    }
+    @else if $align-items==flex-end {
+        @include flexbox((box-align: end), 1);
+    }
+    @else {
+        @include flexbox((box-align: $align-items), 1);
+    }
+    @include flexbox((align-items: $align-items));
+}
+
+@mixin flex-direction($direction) {
+    @if $direction==column {
+        @include flexbox((box-orient: vertical), 1);
+    }
+    @if $direction==column-reverse {
+        @include flexbox((box-orient: vertical), 1);
+        @include flexbox((box-direction: reverse), 1);
+    }
+    @else if $direction==row {
+        @include flexbox((box-orient: horizontal), 1);
+    }
+    @else if $direction==row-reverse {
+        @include flexbox((box-orient: horizontal), 1);
+        @include flexbox((box-direction: reverse), 1);
+    }
+    @include flexbox((flex-direction: $direction));
+}
+
+@mixin justify-content($justify-content) {
+    @if $justify-content==flex-start {
+        @include flexbox((box-pack: start), 1);
+    }
+    @else if $justify-content==flex-end {
+        @include flexbox((box-pack: end), 1);
+    }
+    @else if $justify-content==center {
+        @include flexbox((box-pack: center), 1);
+    }
+    @else if $justify-content==space-between {
+        @include flexbox((box-pack: justify), 1);
+    }
+    @include flexbox((justify-content: $justify-content));
+}
