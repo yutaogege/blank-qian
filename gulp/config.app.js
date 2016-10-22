@@ -26,6 +26,10 @@ module.exports = {
         dest: dest,
         data: `${src}/pug/data/`
     },
+    copyfonts: {
+        src: `${src}/fonts/*`,
+        dest: `${dest}/fonts/`
+    },
     sass: {
         src: `${src}/sass/**/*.scss`,
         dest: `${dest}/css`,

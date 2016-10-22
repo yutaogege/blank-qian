@@ -1,0 +1,15 @@
+// 引入字体的方法
+@mixin font-face($name, $font-files) {
+  @font-face {
+    font-family: quote($name);
+    src: url('#{$font-files}.eot?db50pw#iefix') format('embedded-opentype'),
+    url('#{$font-files}.ttf?db50pw') format('truetype'),
+    url('#{$font-files}.woff?db50pw') format('woff'),
+    url('#{$font-files}.svg?db50pw#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+// 使用
+@include font-face('flatline','../fonts/flatline');

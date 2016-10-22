@@ -135,6 +135,13 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+@font-face {
+  font-family: "flatline";
+  src: url("../fonts/flatline.eot?db50pw#iefix") format("embedded-opentype"), url("../fonts/flatline.ttf?db50pw") format("truetype"), url("../fonts/flatline.woff?db50pw") format("woff"), url("../fonts/flatline.svg?db50pw#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .nav-wrap {
   background-color: #2e2c2d;
   position: fixed;

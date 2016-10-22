@@ -3,9 +3,14 @@ $reset:true;
 // $Response:true;
 
 @import "../../../_source/_function/mobile-mixin";
+
+// 雪碧图
 @import "./sprites/cur";
 @import "./sprites/cur1";
 @import "./sprites/aqi-icon";
+
+// 字体
+@import "compontents/fonts";
 
 .nav-wrap {
     background-color: #2e2c2d;
@@ -140,8 +145,8 @@ $reset:true;
 }
 
 // 响应式其它宽度
-@import ">910";
-@import "<910";
+@import "compontents/>910";
+@import "compontents/<910";
 
 
 .footer {
