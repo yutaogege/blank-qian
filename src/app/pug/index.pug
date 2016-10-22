@@ -3,6 +3,7 @@ append head
 	title learn gulp
 	link(rel='stylesheet',href='css/style.css')
 block content
+	//- 导航
 	div.nav-wrap
 		div.main-nav
 			a.nav-logo(href="#")
@@ -26,6 +27,8 @@ block content
 			li nav2222
 			li nav3333
 		div.n-contant
+
+	//- 视频
 	div.video
 	div.slogan-mod
 		h3 find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME
@@ -33,6 +36,8 @@ block content
 		p Find my beauty identity
 		p Fill my beauty style
 		p Feel the beautiful days
+
+	//- 产品展示
 	div.product-mod
 		h2 'PRODUCTS'
 		ul.list-wrap
@@ -72,17 +77,9 @@ block content
 							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
 							a.viewmore(href="#") VIEW MORE
 				label MASCARA
-	//- h1 我是一个认真的dddddemo
-	//- h2 #{title}
-	//- p 单个图片的使用
-	//- div.div1
-	//- p 多个图片的使用
-	//- ul.clearfix
-		-for(var i=2;i<=7;i++){
-			li(class="demo__lv"+i)
-		-}
 
-	//- div.div2 我是不是很黄
 block script
-	script(src='./js/jquery-1.9.1.js')
+	script(src='//code.jquery.com/jquery-1.11.0.min.js')
+	script.
+		window.jQuery || document.write('<script src="./js/jquery-1.9.1.js" type="text/javascript"><\/script>');
 	script(src='./js/index.js')

@@ -294,7 +294,7 @@ $spritesheet: width height image $spritesheet-sprites;
 
 @media only screen and (max-width: 910px) {
   body {
-    background-color: grey;
+    background-color: yellow;
   }
 }
 

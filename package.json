@@ -1,7 +1,7 @@
 {
-  "name": "gulp-T",
-  "version": "0.4.1",
-  "description": "gulp 综合应用",
+  "name": "blank_qian",
+  "version": "0.0.1",
+  "description": "blank_qian",
   "main": "index.js",
   "scripts": {
     "init": "npm install",
