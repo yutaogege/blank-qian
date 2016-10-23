@@ -26,9 +26,15 @@ module.exports = {
         dest: dest,
         data: `${src}/pug/data/`
     },
-    copyfonts: {
-        src: `${src}/fonts/*`,
-        dest: `${dest}/fonts/`
+    copy: {
+        fonts:{
+            src: `${src}/fonts/**/*`,
+            dest: `${dest}/fonts/`
+        },
+        video:{
+            src: `${src}/source/**/*`,
+            dest: `${dest}/source/`
+        }
     },
     sass: {
         src: `${src}/sass/**/*.scss`,

@@ -14,7 +14,7 @@ gulp.task('app', (callback) => {
     gulpSequence(
         'delete',
         'imagemin', [
-            'copy:fonts',
+            'copy',
             'pug',
             'sass',
             'scripts'
@@ -36,7 +36,7 @@ gulp.task('app:watch', () => {
 gulp.task('app:build', gulpSequence(
     'delete',
     'imagemin', [
-        'copy:fonts',
+        'copy',
         'pug',
         'sass:build',
         'scripts'
