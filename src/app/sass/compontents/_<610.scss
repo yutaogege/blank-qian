@@ -1,0 +1,16 @@
+@media only screen and (max-width:610px) {
+    body {
+        background-color: navy;
+    }
+    .nav-min {
+        @include rem-sprite($aqi-icon-lv1, 720);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.59rem;
+        right: 40px;
+    }
+    .single-nav {
+        display: none !important;
+    }
+}

@@ -1,44 +1,28 @@
 // $rem-base:720;
 $reset:true;
 // $Response:true;
-
 @import "../../../_source/_function/mobile-mixin";
-
 // 雪碧图
 @import "./sprites/cur";
 @import "./sprites/cur1";
 @import "./sprites/aqi-icon";
-
 // 字体
 @import "compontents/fonts";
-
 .nav-wrap {
     background-color: #2e2c2d;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 11;
 }
 
 .main-nav {
-    max-width: 1200px;
     margin: 0 auto;
-    height: 84px;
-    line-height: 84px;
     font-size: 18px;
     text-align: right;
+    height: 84px;
     font-family: Avenir Next, sans-serif;
     position: relative;
-    label a {
-        color: #fdfbfb;
-        display: inline-block;
-        padding: 0 20px;
-    }
-}
-
-.video {
-    height: 100px;
-    background-color: navy;
-    margin-top: 84px;
 }
 
 .nav-logo {
@@ -50,28 +34,29 @@ $reset:true;
     left: 40px;
 }
 
-.sec-nav,.n-products,.n-brand,.n-contant {
-    position: fixed;
-    top: 84px;
-    width: 100%;
-}
-.sec-nav .nav-mask {
-    background-color: #fff;
-    opacity: 0.5;
-    height: 100px;
-    line-height: 100px;
+.video {
+    // height: 100px;
+    // background-color: navy;
+    margin-top: 84px;
+    video {
+        width: 100%;
+    }
 }
 
 .slogan-mod {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 50px auto;
-    padding: 20px 0 10px;
-    border: 3px solid #000;
     text-align: center;
     line-height: 2;
     p {
         font-size: 12px;
     }
+}
+
+.slogan-fix {
+    margin: 0 70px;
+    padding: 20px 0 10px;
+    border: 3px solid #000;
 }
 
 .product-mod {
@@ -111,12 +96,23 @@ $reset:true;
         top: 0;
         left: 0;
         width: 100%;
-        display: none;
+        opacity: 0;
+        height: 234px;
+        &:hover {
+            opacity: 1;
+            transition: 0.2s ease-in-out;
+        }
+        &:hover {
+            .viewmore {
+                line-height: 46px;
+                transition: 0.5s ease-in-out;
+            }
+        }
     }
     .p-mask {
         background-color: #000;
         opacity: 0.5;
-        height: 234px;
+        height: 100%;
     }
     .p-text {
         position: absolute;
@@ -133,7 +129,7 @@ $reset:true;
     .viewmore {
         width: 124px;
         height: 46px;
-        line-height: 46px;
+        line-height: 6px;
         border: 2px #eeeded solid;
         font-size: 14px;
         text-align: center;
@@ -144,14 +140,16 @@ $reset:true;
     }
 }
 
+.nav-min {
+    display: none;
+}
+
 // 响应式其它宽度
 @import "compontents/>910";
-@import "compontents/<910";
-
-
+@import "compontents/<910>610";
+@import "compontents/<610";
 .footer {
-    height: 100px;
-    line-height: 100px;
+    padding: 40px;
     font-size: 18px;
     color: #b8b8b9;
     background-color: #2e2d2d;

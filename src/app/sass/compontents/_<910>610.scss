@@ -1,0 +1,67 @@
+@media only screen and (min-width:610px) {
+    .main-nav {
+        max-width: 1200px;
+        .single-nav {
+            color: #fdfbfb;
+            display: inline-block;
+            line-height: 84px;
+            height: 83px;
+            border-bottom: 1px solid #2e2c2d;
+            &:hover {
+                border-bottom: 1px solid #fdfbfb;
+            }
+        }
+        .single-nav,
+        li {
+            padding: 0 20px;
+        }
+    }
+    .nav-mask {
+        position: fixed;
+        top: 84px;
+        width: 100%;
+        left: 0;
+        background-color: #fff;
+        display: none;
+        height: 100px;
+        line-height: 100px;
+        z-index: -1;
+    }
+    .h-nav:hover {
+        .nav-mask {
+            display: block;
+            opacity: 0.76;
+        }
+        .n-products,
+        .n-brand {
+            display: block;
+        }
+    }
+    .n-products {
+        margin-right: 100px;
+    }
+    .n-brand {
+        margin-right: 50px;
+    }
+    .n-products,
+    .n-brand {
+        position: absolute;
+        line-height: 100px;
+        right: 0;
+        display: none; /////
+        li {
+            display: inline-block;
+            color: #706e6e;
+        }
+    }
+}
+
+@media only screen and (max-width:910px) and (min-width:610px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media only screen and (min-width:910px) {
+
+}

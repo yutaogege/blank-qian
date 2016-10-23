@@ -7,35 +7,34 @@ block content
 	div.nav-wrap
 		div.main-nav
 			a.nav-logo(href="#")
-			label
-				a(href="#") HOME
-			label
-				a(href="#") PRODUCTS
-			label
-				a(href="#") BRAND
-			label
-				a(href="#") CONTANT
-	div.sec-nav
-		div.nav-mask
-		div.n-home
-		ul.n-products
-			li nav11111
-			li nav2222
-			li nav3333
-		ul.n-brand
-			li nav11111
-			li nav2222
-			li nav3333
-		div.n-contant
+			a.single-nav(href="#") HOME
+			a.single-nav.h-nav(href="#") PRODUCTS
+				div.nav-mask
+				ul.n-products
+					li nav11111
+					li nav2222
+					li nav3333
+			a.single-nav.h-nav(href="#") BRAND
+				div.nav-mask
+				ul.n-brand
+					li nav11111
+					li nav2222
+					li nav3333
+			a.single-nav.h-nav(href="#") CONTANT
+				div.n-contant
+			a.nav-min(href="#")
 
 	//- 视频
 	div.video
+		video(controls="controls")
+			source(src="source/WeChatSight77.mp4" type="video/mp4")
 	div.slogan-mod
-		h3 find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME
-		h2 'Blank' ME
-		p Find my beauty identity
-		p Fill my beauty style
-		p Feel the beautiful days
+		div.slogan-fix
+			h3 find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME
+			h2 'Blank' ME
+			p Find my beauty identity
+			p Fill my beauty style
+			p Feel the beautiful days
 
 	//- 产品展示
 	div.product-mod
@@ -82,4 +81,4 @@ block script
 	script(src='//code.jquery.com/jquery-1.11.0.min.js')
 	script.
 		window.jQuery || document.write('<script src="./js/jquery-1.9.1.js" type="text/javascript"><\/script>');
-	script(src='./js/index.js')
+	//- script(src='./js/index.js')
