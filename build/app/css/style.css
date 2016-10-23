@@ -414,6 +414,14 @@ $spritesheet: width height image $spritesheet-sprites;
     top: 0;
     right: 30px;
   }
+  .nav-min.open {
+    background-image: url(../images/aqi-icon-sprite.png);
+    background-size: 3.85185rem 3.85185rem;
+    background-position: 0% 50%;
+    width: 1.18519rem;
+    height: 1.18519rem;
+    background-repeat: no-repeat;
+  }
   .nav-logo {
     left: 30px;
     display: block;

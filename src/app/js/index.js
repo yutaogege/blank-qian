@@ -3,6 +3,7 @@
 $(function (){
 
 	$('.nav-min').click(function() {
+		$('.nav-min').addClass('open')
 		$('.min-toggle').css('opacity', '1');
 	});
 

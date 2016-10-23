@@ -12,6 +12,9 @@
         top: 0;
         right: 30px;
     }
+    .nav-min.open {
+        @include rem-sprite($aqi-icon-lv3, 720);
+    }
     .nav-logo {
         left: 30px;
         display: block;

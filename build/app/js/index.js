@@ -1,1 +1,1 @@
-$(function(){$(".nav-min").click(function(){$(".min-toggle").css("opacity","1")})});
+$(function(){$(".nav-min").click(function(){$(".nav-min").addClass("open"),$(".min-toggle").css("opacity","1")})});
