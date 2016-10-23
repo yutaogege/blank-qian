@@ -1,8 +1,22 @@
 	// console.log(222);
 	// console.log(999);
 $(function (){
-	$('.p-detail').hover(function (){
-		$(this).children('.p-show').toggle(400)
-		console.log('ddd');
+
+	$('.nav-min').click(function() {
+		$('.min-toggle').css('opacity', '1');
 	});
+
+	// $(window).click(function() {
+	// 	$('.min-toggle').css('display', 'none');
+	// });
+
+
+	// 视频
+	// var wWidth = $(window).width(),
+	// 	wHeight = $(window).height();
+	// if ( wWidth > wHeight ) {
+	// 	expression
+	// } else {
+	// 	second expression
+	// }
 });

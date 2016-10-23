@@ -7,22 +7,22 @@ block content
 	div.nav-wrap
 		div.main-nav
 			a.nav-logo(href="#")
-			a.single-nav(href="#") HOME
-			a.single-nav.h-nav(href="#") PRODUCTS
+			a.single-nav.home(href="#") HOME
+			a.single-nav.h-nav.min-toggle(href="#") PRODUCTS
 				div.nav-mask
 				ul.n-products
 					li nav11111
 					li nav2222
 					li nav3333
-			a.single-nav.h-nav(href="#") BRAND
+			a.single-nav.h-nav.min-toggle(href="#") BRAND
 				div.nav-mask
 				ul.n-brand
 					li nav11111
 					li nav2222
 					li nav3333
-			a.single-nav.h-nav(href="#") CONTANT
+			a.single-nav.h-nav.last.min-toggle(href="#") CONTANT
 				div.n-contant
-			a.nav-min(href="#")
+			a.nav-min(href="javascript:;")
 
 	//- 视频
 	div.video
@@ -40,31 +40,31 @@ block content
 	div.product-mod
 		h2 'PRODUCTS'
 		ul.list-wrap
-			li
-				div.p-detail.first
+			li.b-top.b-first
+				div.p-detail.first.b-left
 					img(src='lv1.png')
 					div.p-show
 						div.p-mask
 						div.p-text
-							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字现在29个字
 							a.viewmore(href="#") VIEW MORE
 				label POEDER
-			li
+			li.b-top
 				div.p-detail
 					img(src='lv1.png')
 					div.p-show
 						div.p-mask
 						div.p-text
-							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字现在29个字
 							a.viewmore(href="#") VIEW MORE
 				label MASCARA
 			li
-				div.p-detail
+				div.p-detail.b-left
 					img(src='lv1.png')
 					div.p-show
 						div.p-mask
 						div.p-text
-							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字现在29个字
 							a.viewmore(href="#") VIEW MORE
 				label POEDER
 			li
@@ -73,7 +73,7 @@ block content
 					div.p-show
 						div.p-mask
 						div.p-text
-							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字第二个商品介绍前面7个字现在41.个字
+							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字现在29个字
 							a.viewmore(href="#") VIEW MORE
 				label MASCARA
 
@@ -81,4 +81,4 @@ block script
 	script(src='//code.jquery.com/jquery-1.11.0.min.js')
 	script.
 		window.jQuery || document.write('<script src="./js/jquery-1.9.1.js" type="text/javascript"><\/script>');
-	//- script(src='./js/index.js')
+	script(src='./js/index.js')

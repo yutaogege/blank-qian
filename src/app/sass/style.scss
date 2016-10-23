@@ -19,25 +19,15 @@ $reset:true;
 .main-nav {
     margin: 0 auto;
     font-size: 18px;
-    text-align: right;
-    height: 84px;
     font-family: Avenir Next, sans-serif;
     position: relative;
 }
 
 .nav-logo {
-    display: inline-block;
     @include rem-sprite($aqi-icon-lv2, 720);
-    position: absolute;
-    top: 50%;
-    margin-top: -0.59rem;
-    left: 40px;
 }
 
 .video {
-    // height: 100px;
-    // background-color: navy;
-    margin-top: 84px;
     video {
         width: 100%;
     }
@@ -61,7 +51,6 @@ $reset:true;
 
 .product-mod {
     text-align: center;
-    margin-bottom: 120px;
     h2 {
         margin-bottom: 32px;
     }
@@ -73,8 +62,6 @@ $reset:true;
         max-width: 1200px;
         li {
             float: left;
-            width: 25%;
-            margin: 30px 0;
         }
         label {
             font-size: 16px;
@@ -83,12 +70,7 @@ $reset:true;
     }
     .p-detail {
         height: 234px;
-        border-right: 1px solid #c9c9c9;
-        margin-bottom: 26px;
         position: relative;
-        &.first {
-            border-left: 1px solid #c9c9c9;
-        }
     }
     .p-show {
         z-index: 9;

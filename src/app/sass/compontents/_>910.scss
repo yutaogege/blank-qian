@@ -3,4 +3,18 @@
         background-color: #fff;
     }
 
+    .product-mod {
+        .list-wrap {
+            li {
+                width: 25%;
+            }
+        }
+    }
+
+    .p-detail {
+        border-right: 1px solid #c9c9c9;
+        &.first {
+            border-left: 1px solid #c9c9c9;
+        }
+    }
 }

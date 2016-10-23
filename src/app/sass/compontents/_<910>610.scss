@@ -1,6 +1,11 @@
 @media only screen and (min-width:610px) {
+    .nav-wrap {
+        height: 84px;
+    }
     .main-nav {
         max-width: 1200px;
+        height: 84px;
+        text-align: right;
         .single-nav {
             color: #fdfbfb;
             display: inline-block;
@@ -15,6 +20,13 @@
         li {
             padding: 0 20px;
         }
+    }
+    .nav-logo {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.59rem;
+        left: 40px;
     }
     .nav-mask {
         position: fixed;
@@ -54,14 +66,45 @@
             color: #706e6e;
         }
     }
+    .product-mod .list-wrap {
+        li {
+            margin: 30px 0;
+        }
+    }
+    .product-mod .p-detail {
+        margin-bottom: 26px;
+    }
+    .product-mod {
+        margin-bottom: 120px;
+    }
+    .video {
+        margin-top: 84px;
+    }
 }
 
 @media only screen and (max-width:910px) and (min-width:610px) {
     body {
-        background-color: green;
+        background-color: #ccc;
+    }
+    .product-mod {
+        .list-wrap {
+            li {
+                width: 50%;
+            }
+        }
+    }
+    .product-mod .p-detail.b-left {
+        border-right: 1px solid #c9c9c9;
+    }
+    .product-mod .b-top {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        border-bottom: 3px solid #000;
     }
 }
 
-@media only screen and (min-width:910px) {
-
+@media only screen and (max-width:910px) {
+    .product-mod h2 {
+        font-size: 50px;
+    }
 }

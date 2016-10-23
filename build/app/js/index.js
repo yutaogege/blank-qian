@@ -1,1 +1,1 @@
-$(function(){$(".p-detail").hover(function(){$(this).children(".p-show").toggle(400),console.log("ddd")})});
+$(function(){$(".nav-min").click(function(){$(".min-toggle").css("opacity","1")})});
