@@ -1,1 +1,1 @@
-$(function(){$(".nav-min").click(function(){$(".nav-min").addClass("open"),$(".min-toggle").css("opacity","1")})});
+$(function(){$(".J_nav_btn").click(function(){var n=$(".nav-min-lv1");n.hasClass("open")?n.removeClass("open"):n.addClass("open")})});

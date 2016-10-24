@@ -1,24 +1,46 @@
 @media only screen and (max-width:610px) {
-    body {
-        background-color: #aaa;
-    }
-    .nav-wrap {
+    .header {
         height: 70px;
     }
-    .nav-min {
+    .header-wrap {
+        height: 70px;
+        text-align: center;
+    }
+    .nav-lv1 {
+        display: none;
+    }
+    .min-nav-wrap {
+        display: block;
+        .nav-min-lv1 {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            li {
+                display: block;
+            }
+            .single-nav {
+                display: block;
+                &:hover {
+                    border-bottom: none;
+                }
+            }
+            &.open {
+                display: block;
+            }
+        }
+    }
+    .min-nav-btn {
         @include rem-sprite($aqi-icon-lv1, 720);
         display: inline-block;
         position: absolute;
-        top: 0;
+        top: 50%;
         right: 30px;
+        margin-top: -0.59rem;
     }
     .nav-min.open {
         @include rem-sprite($aqi-icon-lv3, 720);
-    }
-    .nav-logo {
-        left: 30px;
-        display: block;
-        margin: 25px 0 25px 30px;
     }
     .single-nav {
         color: #fff;
@@ -32,47 +54,46 @@
     .n-brand {
         display: none !important;
     }
-    .main-nav {
-        height: 70px;
-        text-align: center;
-    }
-    .h-nav {
+    .nav-lv1 > li {
         border-bottom: 1px solid #4c4c4c;
     }
-    .single-nav.home{
-        display:none;
-    }
-    .single-nav.last{
-        border:none;
+    .single-nav {
+        &.home {
+            display: none;
+        }
+        &.last {
+            border: none;
+        }
     }
     .product-mod {
+        margin-bottom: 40px;
+        .p-detail {
+            border-right: none;
+            &.b-left {
+                border-right: none;
+            }
+        }
         .list-wrap {
             li {
                 width: 100%;
+                border-bottom: 1px solid #000;
+            }
+        }
+        li {
+            &.b-first {
+                border-top: none;
+            }
+            &:last-of-type {
+                border-bottom: 3px solid #000;
             }
         }
     }
-    .product-mod li{
-        padding:40px 0;
-        border-top: 1px solid #000;
-        &.b-first{
-            border-top:none;
+    .p-show {
+        &:hover {
+            display: none;
         }
     }
-    .p-show{
-        &:hover{
-            display:none;
-        }
-    }
-
-    .product-mod {
-        margin-bottom: 40px;
-    }
-
-    .video {
+    .video-wrap {
         margin-top: 70px;
-    }
-    .min-toggle{
-        opacity: 0;
     }
 }

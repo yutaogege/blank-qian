@@ -1,23 +1,12 @@
-	// console.log(222);
-	// console.log(999);
 $(function (){
 
-	$('.nav-min').click(function() {
-		$('.nav-min').addClass('open')
-		$('.min-toggle').css('opacity', '1');
+	$('.J_nav_btn').click(function() {
+		var nav_min = $('.nav-min-lv1');
+		if (nav_min.hasClass('open')) {
+			nav_min.removeClass('open');
+		} else {
+			nav_min.addClass('open');
+		}
 	});
 
-	// $(window).click(function() {
-	// 	$('.min-toggle').css('display', 'none');
-	// });
-
-
-	// 视频
-	// var wWidth = $(window).width(),
-	// 	wHeight = $(window).height();
-	// if ( wWidth > wHeight ) {
-	// 	expression
-	// } else {
-	// 	second expression
-	// }
 });

@@ -142,31 +142,127 @@ $spritesheet: width height image $spritesheet-sprites;
   font-style: normal;
 }
 
-.nav-wrap {
+body {
+  background-color: #fff;
+}
+
+.header {
   background-color: #2e2c2d;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 11;
+  height: 84px;
 }
 
-.main-nav {
+.header-wrap {
   margin: 0 auto;
-  font-size: 18px;
-  font-family: Avenir Next, sans-serif;
   position: relative;
+  max-width: 1200px;
+  height: 84px;
+  text-align: right;
 }
 
-.nav-logo {
+.header-wrap li {
+  display: inline-block;
+}
+
+.header-wrap .single-nav {
+  color: #fdfbfb;
+  display: inline-block;
+  line-height: 84px;
+  height: 83px;
+  border-bottom: 1px solid #2e2c2d;
+}
+
+.header-wrap .single-nav:hover {
+  border-bottom: 1px solid #fdfbfb;
+}
+
+.logo {
   background-image: url(../images/aqi-icon-sprite.png);
   background-size: 3.85185rem 3.85185rem;
   background-position: 50% 0%;
   width: 1.18519rem;
   height: 1.18519rem;
   background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.59rem;
+  left: 40px;
 }
 
-.video video {
+.nav {
+  font-size: 18px;
+  font-family: Avenir Next, sans-serif;
+}
+
+.nav a {
+  padding: 0 20px;
+}
+
+.nav-lv1 > li:hover .nav-mask {
+  display: block;
+  opacity: 0.76;
+}
+
+.nav-lv1 > li:hover .n-products,
+.nav-lv1 > li:hover .n-brand {
+  display: block;
+}
+
+.nav-mask {
+  position: fixed;
+  top: 84px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  height: 100px;
+  line-height: 100px;
+  z-index: -1;
+}
+
+.min-nav-wrap {
+  display: none;
+}
+
+.n-products {
+  margin-right: 100px;
+}
+
+.n-brand {
+  margin-right: 50px;
+}
+
+.n-products,
+.n-brand {
+  position: absolute;
+  line-height: 100px;
+  right: 0;
+  display: none;
+}
+
+.n-products li,
+.n-brand li {
+  display: inline-block;
+}
+
+.n-products a,
+.n-brand a {
+  color: #706e6e;
+}
+
+.nav-min {
+  display: none;
+}
+
+.video-wrap {
+  margin-top: 84px;
+}
+
+.video-wrap video {
   width: 100%;
 }
 
@@ -189,6 +285,7 @@ $spritesheet: width height image $spritesheet-sprites;
 
 .product-mod {
   text-align: center;
+  margin-bottom: 120px;
 }
 
 .product-mod h2 {
@@ -197,7 +294,6 @@ $spritesheet: width height image $spritesheet-sprites;
 
 .product-mod .list-wrap {
   border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
   overflow: hidden;
   margin: 0 auto;
   max-width: 1200px;
@@ -205,6 +301,10 @@ $spritesheet: width height image $spritesheet-sprites;
 
 .product-mod .list-wrap li {
   float: left;
+  margin-top: 10px;
+  border-bottom: 3px solid #000;
+  padding: 30px 0;
+  width: 25%;
 }
 
 .product-mod .list-wrap label {
@@ -215,6 +315,12 @@ $spritesheet: width height image $spritesheet-sprites;
 .product-mod .p-detail {
   height: 234px;
   position: relative;
+  margin-bottom: 26px;
+  border-right: 1px solid #c9c9c9;
+}
+
+.product-mod .p-detail.first {
+  border-left: 1px solid #c9c9c9;
 }
 
 .product-mod .p-show {
@@ -225,18 +331,16 @@ $spritesheet: width height image $spritesheet-sprites;
   width: 100%;
   opacity: 0;
   height: 234px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .product-mod .p-show:hover {
   opacity: 1;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
 }
 
 .product-mod .p-show:hover .viewmore {
   line-height: 46px;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 .product-mod .p-mask {
@@ -270,111 +374,13 @@ $spritesheet: width height image $spritesheet-sprites;
   display: inline-block;
   border-radius: 6px;
   margin-bottom: 26px;
+  -webkit-transition: line-height 0.5s ease-in-out;
+  transition: line-height 0.5s ease-in-out;
 }
 
-.nav-min {
-  display: none;
-}
-
-@media only screen and (min-width: 910px) {
-  body {
-    background-color: #fff;
-  }
-  .product-mod .list-wrap li {
-    width: 25%;
-  }
-  .p-detail {
-    border-right: 1px solid #c9c9c9;
-  }
-  .p-detail.first {
-    border-left: 1px solid #c9c9c9;
-  }
-}
-
-@media only screen and (min-width: 610px) {
-  .nav-wrap {
-    height: 84px;
-  }
-  .main-nav {
-    max-width: 1200px;
-    height: 84px;
-    text-align: right;
-  }
-  .main-nav .single-nav {
-    color: #fdfbfb;
-    display: inline-block;
-    line-height: 84px;
-    height: 83px;
-    border-bottom: 1px solid #2e2c2d;
-  }
-  .main-nav .single-nav:hover {
-    border-bottom: 1px solid #fdfbfb;
-  }
-  .main-nav .single-nav,
-  .main-nav li {
-    padding: 0 20px;
-  }
-  .nav-logo {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    margin-top: -0.59rem;
-    left: 40px;
-  }
-  .nav-mask {
-    position: fixed;
-    top: 84px;
-    width: 100%;
-    left: 0;
-    background-color: #fff;
-    display: none;
-    height: 100px;
-    line-height: 100px;
-    z-index: -1;
-  }
-  .h-nav:hover .nav-mask {
-    display: block;
-    opacity: 0.76;
-  }
-  .h-nav:hover .n-products,
-  .h-nav:hover .n-brand {
-    display: block;
-  }
-  .n-products {
-    margin-right: 100px;
-  }
-  .n-brand {
-    margin-right: 50px;
-  }
-  .n-products,
-  .n-brand {
-    position: absolute;
-    line-height: 100px;
-    right: 0;
-    display: none;
-  }
-  .n-products li,
-  .n-brand li {
-    display: inline-block;
-    color: #706e6e;
-  }
-  .product-mod .list-wrap li {
-    margin: 30px 0;
-  }
-  .product-mod .p-detail {
-    margin-bottom: 26px;
-  }
-  .product-mod {
-    margin-bottom: 120px;
-  }
-  .video {
-    margin-top: 84px;
-  }
-}
-
-@media only screen and (max-width: 910px) and (min-width: 610px) {
-  body {
-    background-color: #ccc;
+@media only screen and (max-width: 910px) {
+  .product-mod h2 {
+    font-size: 50px;
   }
   .product-mod .list-wrap li {
     width: 50%;
@@ -382,27 +388,42 @@ $spritesheet: width height image $spritesheet-sprites;
   .product-mod .p-detail.b-left {
     border-right: 1px solid #c9c9c9;
   }
-  .product-mod .b-top {
-    padding-bottom: 30px;
-    padding-top: 30px;
-    border-bottom: 3px solid #000;
-  }
-}
-
-@media only screen and (max-width: 910px) {
-  .product-mod h2 {
-    font-size: 50px;
-  }
 }
 
 @media only screen and (max-width: 610px) {
-  body {
-    background-color: #aaa;
-  }
-  .nav-wrap {
+  .header {
     height: 70px;
   }
-  .nav-min {
+  .header-wrap {
+    height: 70px;
+    text-align: center;
+  }
+  .nav-lv1 {
+    display: none;
+  }
+  .min-nav-wrap {
+    display: block;
+  }
+  .min-nav-wrap .nav-min-lv1 {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+  .min-nav-wrap .nav-min-lv1 li {
+    display: block;
+  }
+  .min-nav-wrap .nav-min-lv1 .single-nav {
+    display: block;
+  }
+  .min-nav-wrap .nav-min-lv1 .single-nav:hover {
+    border-bottom: none;
+  }
+  .min-nav-wrap .nav-min-lv1.open {
+    display: block;
+  }
+  .min-nav-btn {
     background-image: url(../images/aqi-icon-sprite.png);
     background-size: 3.85185rem 3.85185rem;
     background-position: 0% 0%;
@@ -411,8 +432,9 @@ $spritesheet: width height image $spritesheet-sprites;
     background-repeat: no-repeat;
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 30px;
+    margin-top: -0.59rem;
   }
   .nav-min.open {
     background-image: url(../images/aqi-icon-sprite.png);
@@ -421,11 +443,6 @@ $spritesheet: width height image $spritesheet-sprites;
     width: 1.18519rem;
     height: 1.18519rem;
     background-repeat: no-repeat;
-  }
-  .nav-logo {
-    left: 30px;
-    display: block;
-    margin: 25px 0 25px 30px;
   }
   .single-nav {
     color: #fff;
@@ -439,11 +456,7 @@ $spritesheet: width height image $spritesheet-sprites;
   .n-brand {
     display: none !important;
   }
-  .main-nav {
-    height: 70px;
-    text-align: center;
-  }
-  .h-nav {
+  .nav-lv1 > li {
     border-bottom: 1px solid #4c4c4c;
   }
   .single-nav.home {
@@ -452,27 +465,30 @@ $spritesheet: width height image $spritesheet-sprites;
   .single-nav.last {
     border: none;
   }
+  .product-mod {
+    margin-bottom: 40px;
+  }
+  .product-mod .p-detail {
+    border-right: none;
+  }
+  .product-mod .p-detail.b-left {
+    border-right: none;
+  }
   .product-mod .list-wrap li {
     width: 100%;
-  }
-  .product-mod li {
-    padding: 40px 0;
-    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
   }
   .product-mod li.b-first {
     border-top: none;
   }
+  .product-mod li:last-of-type {
+    border-bottom: 3px solid #000;
+  }
   .p-show:hover {
     display: none;
   }
-  .product-mod {
-    margin-bottom: 40px;
-  }
-  .video {
+  .video-wrap {
     margin-top: 70px;
-  }
-  .min-toggle {
-    opacity: 0;
   }
 }
 

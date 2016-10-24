@@ -1,36 +1,45 @@
 extends ./layout/layout
 append head
-	title learn gulp
+	title Blank ME
 	link(rel='stylesheet',href='css/style.css')
 block content
 	//- 导航
-	div.nav-wrap
-		div.main-nav
-			a.nav-logo(href="#")
-			a.single-nav.home(href="#") HOME
-			a.single-nav.h-nav.min-toggle(href="#") PRODUCTS
-				div.nav-mask
-				ul.n-products
-					li nav11111
-					li nav2222
-					li nav3333
-			a.single-nav.h-nav.min-toggle(href="#") BRAND
-				div.nav-mask
-				ul.n-brand
-					li nav11111
-					li nav2222
-					li nav3333
-			a.single-nav.h-nav.last.min-toggle(href="#") CONTANT
-				div.n-contant
-			a.nav-min(href="javascript:;")
+	div.header
+		div.header-wrap
+			a.logo(href="#")
+			ul.nav.nav-lv1
+				li: a.single-nav.home(href="#") HOME
+				li
+					a.single-nav(href="#") PRODUCTS
+					div.nav-mask
+					ul.nav-lv2.n-products
+						li: a(href="#") nav11111
+						li: a(href="#") nav2222
+						li: a(href="#") nav3333
+				li
+					a.single-nav(href="#") BRAND
+					div.nav-mask
+					ul.nav-lv2.n-brand
+						li: a(href="#") nav11111
+						li: a(href="#") nav2222
+						li: a(href="#") nav3333
+				li
+					a.single-nav.last(href="#") CONTANT
+					div.n-contant
+			div.min-nav-wrap
+				a.min-nav-btn.J_nav_btn(href="javascript:;")
+				ul.nav.nav-min-lv1
+					li: a.single-nav(href="#") PRODUCTS
+					li: a.single-nav(href="#") BRAND
+					li: a.single-nav.last(href="#") CONTANT
 
 	//- 视频
-	div.video
+	div.video-wrap
 		video(controls="controls")
 			source(src="source/WeChatSight77.mp4" type="video/mp4")
 	div.slogan-mod
 		div.slogan-fix
-			h3 find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME
+			h3 find ME&ensp;fill ME&ensp;feel ME
 			h2 'Blank' ME
 			p Find my beauty identity
 			p Fill my beauty style
@@ -40,7 +49,7 @@ block content
 	div.product-mod
 		h2 'PRODUCTS'
 		ul.list-wrap
-			li.b-top.b-first
+			li.b-first
 				div.p-detail.first.b-left
 					img(src='lv1.png')
 					div.p-show
@@ -49,7 +58,7 @@ block content
 							p 第二个商品介绍前面7个字现在17.个字第二个商品介绍前面7个字现在34.个字现在29个字
 							a.viewmore(href="#") VIEW MORE
 				label POEDER
-			li.b-top
+			li
 				div.p-detail
 					img(src='lv1.png')
 					div.p-show

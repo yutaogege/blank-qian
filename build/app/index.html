@@ -6,35 +6,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>learn gulp</title>
+  <title>Blank ME</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="nav-wrap">
-      <div class="main-nav"><a class="nav-logo" href="#"></a><a class="single-nav home" href="#">HOME</a><a class="single-nav h-nav min-toggle" href="#">PRODUCTS
-          <div class="nav-mask"></div>
-          <ul class="n-products">
-            <li>nav11111</li>
-            <li>nav2222</li>
-            <li>nav3333</li>
-          </ul></a><a class="single-nav h-nav min-toggle" href="#">BRAND
-          <div class="nav-mask"></div>
-          <ul class="n-brand">
-            <li>nav11111</li>
-            <li>nav2222</li>
-            <li>nav3333</li>
-          </ul></a><a class="single-nav h-nav last min-toggle" href="#">CONTANT
-          <div class="n-contant"></div></a><a class="nav-min" href="javascript:;"></a></div>
+  <div class="wrapper clearfix">
+    <div class="header">
+      <div class="header-wrap"><a class="logo" href="#"></a>
+        <ul class="nav nav-lv1">
+          <li><a class="single-nav home" href="#">HOME</a></li>
+          <li><a class="single-nav" href="#">PRODUCTS</a>
+            <div class="nav-mask"></div>
+            <ul class="nav-lv2 n-products">
+              <li><a href="#">nav11111</a></li>
+              <li><a href="#">nav2222</a></li>
+              <li><a href="#">nav3333</a></li>
+            </ul>
+          </li>
+          <li><a class="single-nav" href="#">BRAND</a>
+            <div class="nav-mask"></div>
+            <ul class="nav-lv2 n-brand">
+              <li><a href="#">nav11111</a></li>
+              <li><a href="#">nav2222</a></li>
+              <li><a href="#">nav3333</a></li>
+            </ul>
+          </li>
+          <li><a class="single-nav last" href="#">CONTANT</a>
+            <div class="n-contant"></div>
+          </li>
+        </ul>
+        <div class="min-nav-wrap"><a class="min-nav-btn J_nav_btn" href="javascript:;"></a>
+          <ul class="nav nav-min-lv1">
+            <li><a class="single-nav" href="#">PRODUCTS</a></li>
+            <li><a class="single-nav" href="#">BRAND</a></li>
+            <li><a class="single-nav last" href="#">CONTANT</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="video">
+    <div class="video-wrap">
       <video controls="controls">
         <source src="source/WeChatSight77.mp4" type="video/mp4">
       </video>
     </div>
     <div class="slogan-mod">
       <div class="slogan-fix">
-        <h3>find ME&nbsp;&nbsp;fill ME&nbsp;&nbsp;feel ME</h3>
+        <h3>find ME&ensp;fill ME&ensp;feel ME</h3>
         <h2>'Blank' ME</h2>
         <p>Find my beauty identity</p>
         <p>Fill my beauty style</p>
@@ -44,7 +61,7 @@
     <div class="product-mod">
       <h2>'PRODUCTS'</h2>
       <ul class="list-wrap">
-        <li class="b-top b-first">
+        <li class="b-first">
           <div class="p-detail first b-left"><img src="lv1.png">
             <div class="p-show">
               <div class="p-mask"></div>
@@ -55,7 +72,7 @@
           </div>
           <label>POEDER</label>
         </li>
-        <li class="b-top">
+        <li>
           <div class="p-detail"><img src="lv1.png">
             <div class="p-show">
               <div class="p-mask"></div>
