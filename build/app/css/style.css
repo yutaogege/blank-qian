@@ -109,32 +109,6 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
 @font-face {
   font-family: "flatline";
   src: url("../fonts/flatline.eot?db50pw#iefix") format("embedded-opentype"), url("../fonts/flatline.ttf?db50pw") format("truetype"), url("../fonts/flatline.woff?db50pw") format("woff"), url("../fonts/flatline.svg?db50pw#icomoon") format("svg");
@@ -180,17 +154,30 @@ body {
 }
 
 .logo {
-  background-image: url(../images/aqi-icon-sprite.png);
-  background-size: 3.85185rem 3.85185rem;
-  background-position: 50% 0%;
-  width: 1.18519rem;
-  height: 1.18519rem;
-  background-repeat: no-repeat;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  margin-top: -0.59rem;
-  left: 40px;
+  float: left;
+  width: 130px;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.logo span {
+  display: block;
+  height: 0;
+  padding-top: 19.23077%;
+  background-image: url(../images/logo.png);
+  background-size: 100%;
+}
+
+.logo:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 171px;
+  height: 64px;
+  margin-left: 170px;
+  background-image: url(../images/logo-back.png);
+  background-size: 100%;
 }
 
 .nav {
@@ -259,11 +246,20 @@ body {
 }
 
 .video-wrap {
+  position: relative;
   margin-top: 84px;
+  overflow: hidden;
 }
 
 .video-wrap video {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .slogan-mod {
@@ -286,14 +282,20 @@ body {
 .product-mod {
   text-align: center;
   margin-bottom: 120px;
+  padding-bottom: 16px;
+  background: url(../images/index-border.png) no-repeat center bottom;
 }
 
-.product-mod h2 {
-  margin-bottom: 32px;
+.product-mod .product-title {
+  background-image: url(../images/title-products.png);
+  width: 235px;
+  height: 40px;
+  margin: 0 auto 32px;
 }
 
 .product-mod .list-wrap {
-  border-top: 3px solid #000;
+  padding-top: 16px;
+  background: url(../images/index-border.png) no-repeat center top;
   overflow: hidden;
   margin: 0 auto;
   max-width: 1200px;
@@ -302,7 +304,6 @@ body {
 .product-mod .list-wrap li {
   float: left;
   margin-top: 10px;
-  border-bottom: 3px solid #000;
   padding: 30px 0;
   width: 25%;
 }
@@ -379,18 +380,6 @@ body {
 }
 
 @media only screen and (max-width: 910px) {
-  .product-mod h2 {
-    font-size: 50px;
-  }
-  .product-mod .list-wrap li {
-    width: 50%;
-  }
-  .product-mod .p-detail.b-left {
-    border-right: 1px solid #c9c9c9;
-  }
-}
-
-@media only screen and (max-width: 610px) {
   .header {
     height: 70px;
   }
@@ -398,11 +387,16 @@ body {
     height: 70px;
     text-align: center;
   }
+  .logo {
+    margin-top: 22px;
+    margin-left: 30px;
+  }
   .nav-lv1 {
     display: none;
   }
   .min-nav-wrap {
     display: block;
+    text-align: center;
   }
   .min-nav-wrap .nav-min-lv1 {
     display: none;
@@ -418,31 +412,27 @@ body {
     display: block;
   }
   .min-nav-wrap .nav-min-lv1 .single-nav:hover {
-    border-bottom: none;
+    border-bottom-color: #2e2c2d;
   }
   .min-nav-wrap .nav-min-lv1.open {
     display: block;
   }
   .min-nav-btn {
-    background-image: url(../images/aqi-icon-sprite.png);
-    background-size: 3.85185rem 3.85185rem;
-    background-position: 0% 0%;
-    width: 1.18519rem;
-    height: 1.18519rem;
-    background-repeat: no-repeat;
+    background-image: url(../images/slide_nav-sprite.png);
+    background-position: -34px 0px;
+    width: 30px;
+    height: 34px;
     display: inline-block;
     position: absolute;
     top: 50%;
     right: 30px;
-    margin-top: -0.59rem;
+    margin-top: -17px;
   }
-  .nav-min.open {
-    background-image: url(../images/aqi-icon-sprite.png);
-    background-size: 3.85185rem 3.85185rem;
-    background-position: 0% 50%;
-    width: 1.18519rem;
-    height: 1.18519rem;
-    background-repeat: no-repeat;
+  .min-nav-btn.open {
+    background-image: url(../images/slide_nav-sprite.png);
+    background-position: 0px 0px;
+    width: 30px;
+    height: 34px;
   }
   .single-nav {
     color: #fff;
@@ -452,18 +442,8 @@ body {
     background-color: #000;
     opacity: 0.9;
   }
-  .n-products,
-  .n-brand {
-    display: none !important;
-  }
-  .nav-lv1 > li {
-    border-bottom: 1px solid #4c4c4c;
-  }
-  .single-nav.home {
-    display: none;
-  }
-  .single-nav.last {
-    border: none;
+  .video-wrap {
+    margin-top: 70px;
   }
   .product-mod {
     margin-bottom: 40px;
@@ -482,13 +462,27 @@ body {
     border-top: none;
   }
   .product-mod li:last-of-type {
-    border-bottom: 3px solid #000;
+    border-bottom: none;
   }
-  .p-show:hover {
+  .product-mod .p-show:hover {
     display: none;
   }
-  .video-wrap {
+  .product-mod .video-wrap {
     margin-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .logo {
+    width: 100px;
+    margin-top: 25.4px;
+    margin-left: 25px;
+  }
+  .logo:after {
+    display: none;
+  }
+  .min-nav-btn {
+    right: 25px;
   }
 }
 

@@ -1,17 +1,105 @@
 @media only screen and (max-width:910px) {
+    $nav-height: 70px;
+    .header {
+        height: $nav-height;
+    }
+    .header-wrap {
+        height: $nav-height;
+        text-align: center;
+    }
+    .logo {
+        margin-top: 22px;
+        margin-left: 30px;
+    }
+    .nav-lv1 {
+        display: none;
+    }
+    .min-nav-wrap {
+        display: block;
+        text-align: center;
+        .nav-min-lv1 {
+            display: none;
+            position: fixed;
+            top: $nav-height;
+            left: 0;
+            width: 100%;
+            li {
+                display: block;
+            }
+            .single-nav {
+                display: block;
+                &:hover {
+                    border-bottom-color: #2e2c2d;
+                }
+            }
+            &.open {
+                display: block;
+            }
+        }
+    }
+    .min-nav-btn {
+        @include sprite($slide_nav-slide-open);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        margin-top: -17px;
+    }
+    .min-nav-btn.open {
+        @include sprite($slide_nav-slide-close);
+    }
+    .single-nav {
+        color: #fff;
+        display: block;
+        line-height: $nav-height;
+        height: $nav-height;
+        background-color: #000;
+        opacity: 0.9;
+    }
+    // .product-mod {
+    //     .list-wrap {
+    //         li {
+    //             width: 50%;
+    //         }
+    //     }
+    //     .p-detail {
+    //         &.b-left {
+    //             border-right: 1px solid #c9c9c9;
+    //         }
+    //     }
+    // }
+    .video-wrap{
+        margin-top: $nav-height;
+    }
     .product-mod {
-        h2 {
-            font-size: 50px;
+        margin-bottom: 40px;
+        .p-detail {
+            border-right: none;
+            &.b-left {
+                border-right: none;
+            }
         }
         .list-wrap {
             li {
-                width: 50%;
+                width: 100%;
+                border-bottom: 1px solid #000;
             }
         }
-        .p-detail {
-            &.b-left {
-                border-right: 1px solid #c9c9c9;
+        li {
+            &.b-first {
+                border-top: none;
             }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+        .p-show {
+            &:hover {
+                display: none;
+            }
+        }
+        .video-wrap {
+            margin-top: $nav-height;
         }
     }
 }

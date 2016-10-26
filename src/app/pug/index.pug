@@ -6,7 +6,7 @@ block content
 	//- 导航
 	div.header
 		div.header-wrap
-			a.logo(href="#")
+			a.logo(href="#"): span
 			ul.nav.nav-lv1
 				li: a.single-nav.home(href="#") HOME
 				li
@@ -35,7 +35,7 @@ block content
 
 	//- 视频
 	div.video-wrap
-		video(controls="controls")
+		video(autoplay="autoplay" loop="loop" muted)
 			source(src="source/WeChatSight77.mp4" type="video/mp4")
 	div.slogan-mod
 		div.slogan-fix
@@ -47,7 +47,7 @@ block content
 
 	//- 产品展示
 	div.product-mod
-		h2 'PRODUCTS'
+		div.product-title
 		ul.list-wrap
 			li.b-first
 				div.p-detail.first.b-left
