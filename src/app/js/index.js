@@ -22,7 +22,7 @@ $(function() {
 
         _videoBox.find('video').css({
             'height': wRate ? 'auto' : reHeight,
-            'width': wRate ? wWidth : 'auto'
+            'width': !wRate ? 'auto' : wWidth
         })
 
     };
