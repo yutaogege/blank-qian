@@ -142,15 +142,30 @@ body {
 }
 
 .header-wrap .single-nav {
-  color: #fdfbfb;
-  display: inline-block;
   line-height: 84px;
+  position: relative;
+  display: inline-block;
   height: 83px;
-  border-bottom: 1px solid #2e2c2d;
+  color: #fdfbfb;
 }
 
-.header-wrap .single-nav:hover {
-  border-bottom: 1px solid #fdfbfb;
+.header-wrap .single-nav .line {
+  width: 0;
+  height: 1px;
+  background-color: #fdfbfb;
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.header-wrap .single-nav:hover .line {
+  left: 25%;
+  width: 50%;
+  opacity: 1;
 }
 
 .logo {

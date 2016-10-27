@@ -30,13 +30,28 @@ $nav-height: 84px;
         display: inline-block;
     }
     .single-nav {
-        color: #fdfbfb;
-        display: inline-block;
         line-height: $nav-height;
+        position: relative;
+        display: inline-block;
         height: 83px;
-        border-bottom: 1px solid #2e2c2d;
+        color: #fdfbfb;
+        .line {
+            width: 0;
+            height: 1px;
+            background-color: #fdfbfb;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            display: block;
+            opacity: 0;
+            transition: all 0.2s ease-out;
+        }
         &:hover {
-            border-bottom: 1px solid #fdfbfb;
+            .line {
+                left: 25%;
+                width: 50%;
+                opacity: 1;
+            }
         }
     }
 }
