@@ -1,34 +1,34 @@
 // $rem-base:720;
-$reset:true;
+$reset: true;
 // $Response:true;
-@import "../../../_source/_function/mobile-mixin";
+@import '../../../_source/_function/mobile-mixin';
 // 雪碧图
-@import "./sprites/slide_nav";
+@import './sprites/slide_nav';
 // 字体
-@import "compontents/fonts";
-body {
-    background-color: #fff;
-}
+@import 'compontents/fonts';
 
 body {
     font-family: Avenir Next, sans-serif;
+    background-color: #fff;
 }
-
+// common
 $nav-height: 84px;
+
+// header
 .header {
-    background-color: #2e2c2d;
     position: fixed;
+    z-index: 11;
     top: 0;
     width: 100%;
-    z-index: 11;
     height: $nav-height;
+    background-color: #2e2c2d;
 }
 
 .header-wrap {
-    margin: 0 auto;
     position: relative;
     max-width: 1200px;
     height: $nav-height;
+    margin: 0 auto;
     text-align: right;
     li {
         display: inline-block;
@@ -40,15 +40,15 @@ $nav-height: 84px;
         height: 83px;
         color: #fdfbfb;
         .line {
-            width: 0;
-            height: 1px;
-            background-color: #fdfbfb;
             position: absolute;
             top: 65px;
             left: 50%;
             display: block;
+            width: 0;
+            height: 1px;
+            transition: all .2s ease-out;
             opacity: 0;
-            transition: all 0.2s ease-out;
+            background-color: #fdfbfb;
         }
         &:hover {
             .line {
@@ -73,21 +73,21 @@ $nav-height: 84px;
         background-size: 100%;
     }
     &:after {
-        content: "";
         position: fixed;
         top: 0;
         display: block;
         width: 171px;
         height: 64px;
         margin-left: 170px;
+        content: '';
         background-image: url(../images/logo-back.png);
         background-size: 100%;
     }
 }
 
 .nav {
-    font-size: 18px;
     font-family: Avenir Next, sans-serif;
+    font-size: 18px;
     a {
         padding: 0 20px;
     }
@@ -97,10 +97,9 @@ $nav-height: 84px;
                 &:hover {
                     .nav-mask {
                         display: block;
-                        opacity: 0.95;
+                        opacity: .95;
                     }
-                    .n-products,
-                    .n-brand {
+                    .n-products, .n-brand {
                         display: block;
                     }
                 }
@@ -110,15 +109,15 @@ $nav-height: 84px;
 }
 
 .nav-mask {
-    position: fixed;
-    top: $nav-height;
-    width: 100%;
-    left: 0;
-    background-color: #fff;
-    display: none;
-    height: 100px;
     line-height: 100px;
+    position: fixed;
     z-index: -1;
+    top: $nav-height;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
 }
 
 .min-nav-wrap {
@@ -133,10 +132,9 @@ $nav-height: 84px;
     margin-right: 50px;
 }
 
-.n-products,
-.n-brand {
-    position: absolute;
+.n-products, .n-brand {
     line-height: 100px;
+    position: absolute;
     right: 0;
     display: none;
     li {
@@ -147,14 +145,11 @@ $nav-height: 84px;
     }
 }
 
-.nav-min {
-    display: none;
-}
-
+// video
 .video-wrap {
     position: relative;
-    margin-top: $nav-height - 1px;
     overflow: hidden;
+    margin-top: $nav-height - 1px;
     video {
         position: absolute;
         top: 50%;
@@ -166,10 +161,10 @@ $nav-height: 84px;
 }
 
 .slogan-mod {
+    line-height: 2;
     max-width: 1200px;
     margin: 50px auto;
     text-align: center;
-    line-height: 2;
     p {
         font-size: 12px;
     }
@@ -181,37 +176,37 @@ $nav-height: 84px;
     border: 3px solid #000;
 }
 
+// 产品列表
 .product-mod {
-    text-align: center;
     margin-bottom: 120px;
     padding-bottom: 16px;
+    text-align: center;
     background: url(../images/index-border.png) no-repeat center bottom;
     .product-title {
-        background-image: url(../images/title-products.png);
         width: 235px;
         height: 40px;
         margin: 0 auto 32px;
+        background-image: url(../images/title-products.png);
     }
     .list-box {
-        height: 400px;
         position: relative;
+        height: 400px;
     }
     .list-wrap {
-        padding-top: 16px;
-        background: url(../images/index-border.png) no-repeat center top;
-        overflow: hidden;
-        margin: 0 auto;
-        width: 1200px;
         position: absolute;
         top: 40px;
         left: 50%;
+        overflow: hidden;
+        width: 1200px;
         margin-left: -600px;
+        padding-top: 16px;
+        background: url(../images/index-border.png) no-repeat center top;
         li {
             float: left;
+            width: 25%;
             margin-top: 10px;
             // border-bottom: 1px solid #000;
             padding: 30px 0;
-            width: 25%;
         }
         label {
             font-size: 16px;
@@ -219,8 +214,8 @@ $nav-height: 84px;
         }
     }
     .p-detail {
-        height: 234px;
         position: relative;
+        height: 234px;
         margin-bottom: 26px;
         border-right: 1px solid #c9c9c9;
         &.first {
@@ -228,14 +223,14 @@ $nav-height: 84px;
         }
     }
     .p-show {
-        z-index: 9;
         position: absolute;
+        z-index: 9;
         top: 0;
         left: 0;
         width: 100%;
-        opacity: 0;
         height: 234px;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
         &:hover {
             opacity: 1;
             // .viewmore {
@@ -244,45 +239,47 @@ $nav-height: 84px;
         }
     }
     .p-mask {
-        background-color: #000;
-        opacity: 0.5;
         height: 100%;
+        opacity: .5;
+        background-color: #000;
     }
     .p-text {
         position: absolute;
         top: 0;
         p {
             font-size: 16px;
-            text-align: left;
             line-height: 1.6;
-            color: #eeeded;
-            padding: 30px;
             height: 96px;
+            padding: 30px;
+            text-align: left;
+            color: #eeeded;
         }
     }
     .viewmore {
+        font-size: 14px;
+        line-height: 46px;
+        display: inline-block;
         width: 124px;
         height: 46px;
-        line-height: 46px;
-        border: 1px #eeeded solid;
-        font-size: 14px;
+        margin-bottom: 26px;
         text-align: center;
         color: #fff;
-        display: inline-block;
+        border: 1px #eeeded solid;
         border-radius: 2px;
-        margin-bottom: 26px;
         // transition: line-height 0.5s ease-in-out;
     }
 }
 
 // 响应式其它宽度
-@import "compontents/<910";
-@import "compontents/<610";
+@import 'compontents/<910';
+@import 'compontents/<610';
+
+// 页脚
 .footer {
-    padding: 40px;
+    font-family: Avenir Next, sans-serif;
     font-size: 18px;
+    padding: 40px;
+    text-align: center;
     color: #b8b8b9;
     background-color: #2e2d2d;
-    text-align: center;
-    font-family: Avenir Next, sans-serif;
 }

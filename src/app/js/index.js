@@ -1,4 +1,10 @@
 $(function() {
+    // 判断是否为ios系统，决定是否让视频自动播放
+    var UA = navigator.userAgent;
+    var ios = !!UA.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    if (!ios) {
+        $('.video')[0].play();
+    }
 
     $('.J_nav_btn').click(function() {
         var nav_min = $('.nav-min-lv1');
