@@ -206,7 +206,7 @@ body {
 
 .nav-lv1 > li:hover .nav-mask {
   display: block;
-  opacity: 0.76;
+  opacity: 0.95;
 }
 
 .nav-lv1 > li:hover .n-products,
@@ -355,10 +355,6 @@ body {
   opacity: 1;
 }
 
-.product-mod .p-show:hover .viewmore {
-  line-height: 46px;
-}
-
 .product-mod .p-mask {
   background-color: #000;
   opacity: 0.5;
@@ -382,7 +378,7 @@ body {
 .product-mod .viewmore {
   width: 124px;
   height: 46px;
-  line-height: 6px;
+  line-height: 46px;
   border: 2px #eeeded solid;
   font-size: 14px;
   text-align: center;
@@ -390,8 +386,6 @@ body {
   display: inline-block;
   border-radius: 6px;
   margin-bottom: 26px;
-  -webkit-transition: line-height 0.5s ease-in-out;
-  transition: line-height 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 910px) {

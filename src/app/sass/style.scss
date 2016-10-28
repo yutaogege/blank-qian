@@ -93,7 +93,7 @@ $nav-height: 84px;
                 &:hover {
                     .nav-mask {
                         display: block;
-                        opacity: 0.76;
+                        opacity: 0.95;
                     }
                     .n-products,
                     .n-brand {
@@ -226,9 +226,9 @@ $nav-height: 84px;
         transition: opacity 0.2s ease-in-out;
         &:hover {
             opacity: 1;
-            .viewmore {
-                line-height: 46px;
-            }
+            // .viewmore {
+            //     line-height: 46px;
+            // }
         }
     }
     .p-mask {
@@ -251,7 +251,7 @@ $nav-height: 84px;
     .viewmore {
         width: 124px;
         height: 46px;
-        line-height: 6px;
+        line-height: 46px;
         border: 2px #eeeded solid;
         font-size: 14px;
         text-align: center;
@@ -259,7 +259,7 @@ $nav-height: 84px;
         display: inline-block;
         border-radius: 6px;
         margin-bottom: 26px;
-        transition: line-height 0.5s ease-in-out;
+        // transition: line-height 0.5s ease-in-out;
     }
 }
 
