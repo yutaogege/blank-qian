@@ -24,12 +24,21 @@ $(function() {
             reHeight = wHeight - parseInt(_videoBox.css('marginTop')) + 'px',
             wRate = parseInt(wWidth) / parseInt(reHeight) > 1280 / 720;
 
-        _videoBox.height(reHeight);
+        if (wWidth < 610) {
+            _videoBox.height('200px');
+            _videoBox.find('video').css({
+                'height': '100%',
+                'width': '100%'
+            })
+        } else {
+            _videoBox.height(reHeight);
 
-        _videoBox.find('video').css({
-            'height': wRate ? 'auto' : reHeight,
-            'width': !wRate ? 'auto' : wWidth
-        })
+            _videoBox.find('video').css({
+                'height': wRate ? 'auto' : reHeight,
+                'width': !wRate ? 'auto' : wWidth
+            })
+        }
+
 
     };
 

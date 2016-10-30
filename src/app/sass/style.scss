@@ -159,13 +159,14 @@ $nav-height: 84px;
     position: relative;
     overflow: hidden;
     margin-top: $nav-height - 1px;
+    background: #000;
     video {
         position: absolute;
         top: 50%;
         left: 50%;
         width: auto;
         height: 100%;
-        transform: translate(-50%, -50%);
+        transform: translate3d(-50%, -50%,0);
     }
 }
 

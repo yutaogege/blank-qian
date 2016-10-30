@@ -270,6 +270,7 @@ body {
   position: relative;
   overflow: hidden;
   margin-top: 83px;
+  background: #000;
 }
 
 .video-wrap video {
@@ -278,9 +279,8 @@ body {
   left: 50%;
   width: auto;
   height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 
 .slogan-mod {
