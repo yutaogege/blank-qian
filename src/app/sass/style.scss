@@ -6,14 +6,13 @@ $reset: true;
 @import './sprites/slide_nav';
 // 字体
 @import 'compontents/fonts';
-
 body {
     font-family: Avenir Next, sans-serif;
     background-color: #fff;
 }
+
 // common
 $nav-height: 84px;
-
 // header
 .header {
     position: fixed;
@@ -80,7 +79,7 @@ $nav-height: 84px;
         height: 64px;
         margin-left: 170px;
         content: '';
-        background-image: url(../images/logo-back.png);
+        background-image: url(../images/logo-right02.png);
         background-size: 100%;
     }
 }
@@ -99,9 +98,31 @@ $nav-height: 84px;
                         display: block;
                         opacity: .95;
                     }
-                    .n-products, .n-brand {
-                        display: block;
+                    .nav-lv2 {
+                        right: 0;
+                        li {
+                            margin-right: 0px;
+                            opacity: 1;
+                        }
                     }
+                }
+            }
+        }
+        .nav-lv2 {
+            font-size: 21px;
+            line-height: 100px;
+            position: absolute;
+            right: 100%;
+            li {
+                display: inline-block;
+                margin-right: -30px;
+                opacity: 0;
+                transition: all .2s ease-in-out .1s;
+            }
+            a {
+                color: #706e6e;
+                &:hover {
+                    color: #a78e64;
                 }
             }
         }
@@ -132,18 +153,6 @@ $nav-height: 84px;
     margin-right: 50px;
 }
 
-.n-products, .n-brand {
-    line-height: 100px;
-    position: absolute;
-    right: 0;
-    display: none;
-    li {
-        display: inline-block;
-    }
-    a {
-        color: #706e6e;
-    }
-}
 
 // video
 .video-wrap {
@@ -161,19 +170,26 @@ $nav-height: 84px;
 }
 
 .slogan-mod {
-    line-height: 2;
+    // line-height: 2;
     max-width: 1200px;
     margin: 50px auto;
-    text-align: center;
+    // text-align: center;
     p {
-        font-size: 12px;
+        // font-size: 12px;
     }
 }
 
 .slogan-fix {
-    margin: 0 70px;
-    padding: 20px 0 10px;
-    border: 3px solid #000;
+    // height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    span {
+        display: block;
+        height: 0;
+        padding-top: percentage(300/1200);
+        background-image: url(../images/logo.png);
+        background-size: 100%;
+    }
 }
 
 // 产品列表
@@ -190,20 +206,20 @@ $nav-height: 84px;
     }
     .list-box {
         position: relative;
+        overflow: hidden;
         height: 400px;
     }
     .list-wrap {
         position: absolute;
         top: 40px;
         left: 50%;
-        overflow: hidden;
         width: 1200px;
         margin-left: -600px;
         padding-top: 16px;
         background: url(../images/index-border.png) no-repeat center top;
         li {
             float: left;
-            width: 25%;
+            // width: 25%;
             margin-top: 10px;
             // border-bottom: 1px solid #000;
             padding: 30px 0;
@@ -215,10 +231,13 @@ $nav-height: 84px;
     }
     .p-detail {
         position: relative;
+        width: 299px;
         height: 234px;
         margin-bottom: 26px;
         border-right: 1px solid #c9c9c9;
+        overflow: hidden;
         &.first {
+            width: 298px;
             border-left: 1px solid #c9c9c9;
         }
     }
@@ -240,7 +259,7 @@ $nav-height: 84px;
     }
     .p-mask {
         height: 100%;
-        opacity: .5;
+        opacity: .76;
         background-color: #000;
     }
     .p-text {
@@ -267,12 +286,11 @@ $nav-height: 84px;
         border: 1px #eeeded solid;
         border-radius: 2px;
         // transition: line-height 0.5s ease-in-out;
+        &:hover {
+            color: #a78e64;
+        }
     }
 }
-
-// 响应式其它宽度
-@import 'compontents/<910';
-@import 'compontents/<610';
 
 // 页脚
 .footer {
@@ -283,3 +301,7 @@ $nav-height: 84px;
     color: #b8b8b9;
     background-color: #2e2d2d;
 }
+
+// 响应式其它宽度
+@import 'compontents/<910';
+@import 'compontents/<610';

@@ -192,7 +192,7 @@ body {
   height: 64px;
   margin-left: 170px;
   content: '';
-  background-image: url(../images/logo-back.png);
+  background-image: url(../images/logo-right02.png);
   background-size: 100%;
 }
 
@@ -210,8 +210,36 @@ body {
   opacity: .95;
 }
 
-.nav-lv1 > li:hover .n-products, .nav-lv1 > li:hover .n-brand {
-  display: block;
+.nav-lv1 > li:hover .nav-lv2 {
+  right: 0;
+}
+
+.nav-lv1 > li:hover .nav-lv2 li {
+  margin-right: 0px;
+  opacity: 1;
+}
+
+.nav-lv2 {
+  font-size: 21px;
+  line-height: 100px;
+  position: absolute;
+  right: 100%;
+}
+
+.nav-lv2 li {
+  display: inline-block;
+  margin-right: -30px;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out .1s;
+  transition: all .2s ease-in-out .1s;
+}
+
+.nav-lv2 a {
+  color: #706e6e;
+}
+
+.nav-lv2 a:hover {
+  color: #a78e64;
 }
 
 .nav-mask {
@@ -238,21 +266,6 @@ body {
   margin-right: 50px;
 }
 
-.n-products, .n-brand {
-  line-height: 100px;
-  position: absolute;
-  right: 0;
-  display: none;
-}
-
-.n-products li, .n-brand li {
-  display: inline-block;
-}
-
-.n-products a, .n-brand a {
-  color: #706e6e;
-}
-
 .video-wrap {
   position: relative;
   overflow: hidden;
@@ -271,20 +284,21 @@ body {
 }
 
 .slogan-mod {
-  line-height: 2;
   max-width: 1200px;
   margin: 50px auto;
-  text-align: center;
-}
-
-.slogan-mod p {
-  font-size: 12px;
 }
 
 .slogan-fix {
-  margin: 0 70px;
-  padding: 20px 0 10px;
-  border: 3px solid #000;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slogan-fix span {
+  display: block;
+  height: 0;
+  padding-top: 25%;
+  background-image: url(../images/logo.png);
+  background-size: 100%;
 }
 
 .product-mod {
@@ -303,6 +317,7 @@ body {
 
 .product-mod .list-box {
   position: relative;
+  overflow: hidden;
   height: 400px;
 }
 
@@ -310,7 +325,6 @@ body {
   position: absolute;
   top: 40px;
   left: 50%;
-  overflow: hidden;
   width: 1200px;
   margin-left: -600px;
   padding-top: 16px;
@@ -319,7 +333,6 @@ body {
 
 .product-mod .list-wrap li {
   float: left;
-  width: 25%;
   margin-top: 10px;
   padding: 30px 0;
 }
@@ -331,12 +344,15 @@ body {
 
 .product-mod .p-detail {
   position: relative;
+  width: 299px;
   height: 234px;
   margin-bottom: 26px;
   border-right: 1px solid #c9c9c9;
+  overflow: hidden;
 }
 
 .product-mod .p-detail.first {
+  width: 298px;
   border-left: 1px solid #c9c9c9;
 }
 
@@ -358,7 +374,7 @@ body {
 
 .product-mod .p-mask {
   height: 100%;
-  opacity: .5;
+  opacity: .76;
   background-color: #000;
 }
 
@@ -389,16 +405,28 @@ body {
   border-radius: 2px;
 }
 
+.product-mod .viewmore:hover {
+  color: #a78e64;
+}
+
+.footer {
+  font-family: Avenir Next, sans-serif;
+  font-size: 18px;
+  padding: 40px;
+  text-align: center;
+  color: #b8b8b9;
+  background-color: #2e2d2d;
+}
+
 @media only screen and (max-width: 910px) {
   .header {
-    height: 70px;
+    height: 84px;
   }
   .header-wrap {
-    height: 70px;
+    height: 84px;
     text-align: center;
   }
   .logo {
-    margin-top: 22px;
     margin-left: 30px;
   }
   .nav-lv1 {
@@ -410,16 +438,22 @@ body {
   }
   .min-nav-wrap .nav-min-lv1 {
     position: fixed;
-    top: 70px;
+    top: 84px;
     left: 0;
     display: none;
     width: 100%;
   }
   .min-nav-wrap .nav-min-lv1 li {
     display: block;
+    border-bottom: #4c4c4c 1px solid;
+  }
+  .min-nav-wrap .nav-min-lv1 li.last {
+    border: none;
   }
   .min-nav-wrap .nav-min-lv1 .single-nav {
+    line-height: 70px;
     display: block;
+    height: 70px;
   }
   .min-nav-wrap .nav-min-lv1 .single-nav:hover {
     border-bottom-color: #2e2c2d;
@@ -445,15 +479,15 @@ body {
     height: 34px;
   }
   .single-nav {
-    line-height: 70px;
+    line-height: 84px;
     display: block;
-    height: 70px;
+    height: 84px;
     opacity: .9;
     color: #fff;
     background-color: #000;
   }
   .video-wrap {
-    margin-top: 69px;
+    margin-top: 83px;
   }
   .product-mod {
     margin-bottom: 40px;
@@ -472,6 +506,7 @@ body {
     border-bottom: 1px solid #c9c9c9;
   }
   .product-mod .p-detail {
+    width: auto;
     border-right: none;
   }
   .product-mod .p-detail.b-left {
@@ -487,31 +522,8 @@ body {
     display: none;
   }
   .product-mod .video-wrap {
-    margin-top: 70px;
+    margin-top: 84px;
   }
-}
-
-@media only screen and (max-width: 610px) {
-  .logo {
-    width: 100px;
-    margin-top: 25.4px;
-    margin-left: 25px;
-  }
-  .logo:after {
-    display: none;
-  }
-  .min-nav-btn {
-    right: 25px;
-  }
-}
-
-.footer {
-  font-family: Avenir Next, sans-serif;
-  font-size: 18px;
-  padding: 40px;
-  text-align: center;
-  color: #b8b8b9;
-  background-color: #2e2d2d;
 }
 
 /*# sourceMappingURL=.map/style.css.map */

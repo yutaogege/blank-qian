@@ -8,7 +8,7 @@ block content
 		div.header-wrap
 			a.logo(href="#"): span
 			ul.nav.nav-lv1
-				li: a.single-nav.home(href="#") HOME
+				li: a.single-nav(href="#") HOME
 					span.line
 				li
 					a.single-nav(href="#") PRODUCTS
@@ -35,28 +35,29 @@ block content
 				ul.nav.nav-min-lv1
 					li: a.single-nav(href="#") PRODUCTS
 					li: a.single-nav(href="#") BRAND
-					li: a.single-nav.last(href="#") CONTANT
-
+					li.last: a.single-nav(href="#") CONTANT
+	//- muted
 	//- 视频
 	div.video-wrap
-		video.video(loop="loop" muted)
+		video.video(loop="loop")
 			source(src="source/WeChatSight77.mp4" type="video/mp4")
 	div.slogan-mod
 		div.slogan-fix
-			h3 find ME&ensp;fill ME&ensp;feel ME
-			h2 'Blank' ME
-			p Find my beauty identity
-			p Fill my beauty style
-			p Feel the beautiful days
+			span(style="background-image:url(./images/f-text.png)")
+			//- h3 find ME&ensp;fill ME&ensp;feel ME
+			//- h2 'Blank' ME
+			//- p Find my beauty identity
+			//- p Fill my beauty style
+			//- p Feel the beautiful days
 
 	//- 产品展示
 	div.product-mod
 		div.product-title
 		div.list-box
 			ul.list-wrap
-				li.b-first
-					div.p-detail.first.b-left
-						img(src='lv1.png')
+				li
+					div.p-detail.first
+						img(src='./images/pro1.png')
 						div.p-show
 							div.p-mask
 							div.p-text
@@ -65,7 +66,7 @@ block content
 					label POEDER
 				li
 					div.p-detail
-						img(src='lv1.png')
+						img(src='./images/pro2.png')
 						div.p-show
 							div.p-mask
 							div.p-text
@@ -73,8 +74,8 @@ block content
 								a.viewmore(href="#") VIEW MORE
 					label MASCARA
 				li
-					div.p-detail.b-left
-						img(src='lv1.png')
+					div.p-detail
+						img(src='./images/pro3.png')
 						div.p-show
 							div.p-mask
 							div.p-text
@@ -83,7 +84,7 @@ block content
 					label POEDER
 				li
 					div.p-detail
-						img(src='lv1.png')
+						img(src='./images/pro4.png')
 						div.p-show
 							div.p-mask
 							div.p-text
