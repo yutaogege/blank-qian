@@ -21,11 +21,11 @@ block content
 				li
 					a.single-nav(href="#") BRAND
 						span.line
-					div.nav-mask
-					ul.nav-lv2.n-brand
-						li: a(href="#") nav11111
-						li: a(href="#") nav2222
-						li: a(href="#") nav3333
+					//- div.nav-mask
+					//- ul.nav-lv2.n-brand
+					//- 	li: a(href="#") nav11111
+					//- 	li: a(href="#") nav2222
+					//- 	li: a(href="#") nav3333
 				li
 					a.single-nav.last(href="#") CONTANT
 						span.line
@@ -36,11 +36,15 @@ block content
 					li: a.single-nav(href="#") PRODUCTS
 					li: a.single-nav(href="#") BRAND
 					li.last: a.single-nav(href="#") CONTANT
+
+	//- banner
+	div.banner(style="background-image:url(./images/banner-pc.jpg)")
+
 	//- muted
 	//- 视频
 	div.video-wrap
-		video.video(loop="loop")
-			source(src="source/WeChatSight77.mp4" type="video/mp4")
+		video.video(loop="loop" muted)
+			source(src="source/video.mp4" type="video/mp4")
 	div.slogan-mod
 		div.slogan-fix
 			span(style="background-image:url(./images/f-text.png)")

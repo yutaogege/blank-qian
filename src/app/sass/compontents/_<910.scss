@@ -1,5 +1,5 @@
 @media only screen and (max-width:910px) {
-    $nav-height: 84px;
+    $nav-height: 70px;
     .header {
         height: $nav-height;
     }
@@ -63,7 +63,7 @@
         background-color: #000;
     }
     .video-wrap {
-        margin-top: $nav-height - 1px;
+        // margin-top: $nav-height - 1px;
     }
     .product-mod {
         margin-bottom: 40px;

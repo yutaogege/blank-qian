@@ -126,14 +126,13 @@ body {
   z-index: 11;
   top: 0;
   width: 100%;
-  height: 84px;
+  height: 70px;
   background-color: #2e2c2d;
 }
 
 .header-wrap {
   position: relative;
-  max-width: 1200px;
-  height: 84px;
+  height: 70px;
   margin: 0 auto;
   text-align: right;
 }
@@ -143,16 +142,16 @@ body {
 }
 
 .header-wrap .single-nav {
-  line-height: 84px;
+  line-height: 70px;
   position: relative;
   display: inline-block;
-  height: 83px;
+  height: 69px;
   color: #fdfbfb;
 }
 
 .header-wrap .single-nav .line {
   position: absolute;
-  top: 65px;
+  top: 55px;
   left: 50%;
   display: block;
   width: 0;
@@ -172,8 +171,8 @@ body {
 .logo {
   float: left;
   width: 130px;
-  margin-top: 30px;
-  margin-left: 40px;
+  margin-top: 23px;
+  margin-left: 50px;
 }
 
 .logo span {
@@ -198,7 +197,8 @@ body {
 
 .nav {
   font-family: Avenir Next, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  margin-right: 30px;
 }
 
 .nav a {
@@ -221,7 +221,7 @@ body {
 
 .nav-lv2 {
   font-size: 21px;
-  line-height: 100px;
+  line-height: 86px;
   position: absolute;
   right: 100%;
 }
@@ -243,14 +243,14 @@ body {
 }
 
 .nav-mask {
-  line-height: 100px;
+  line-height: 86px;
   position: fixed;
   z-index: -1;
-  top: 84px;
+  top: 70px;
   left: 0;
   display: none;
   width: 100%;
-  height: 100px;
+  height: 86px;
   background-color: #fff;
 }
 
@@ -266,10 +266,17 @@ body {
   margin-right: 50px;
 }
 
+.banner {
+  width: 100%;
+  height: 200px;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 69px;
+}
+
 .video-wrap {
   position: relative;
   overflow: hidden;
-  margin-top: 83px;
   background: #000;
 }
 
@@ -420,10 +427,10 @@ body {
 
 @media only screen and (max-width: 910px) {
   .header {
-    height: 84px;
+    height: 70px;
   }
   .header-wrap {
-    height: 84px;
+    height: 70px;
     text-align: center;
   }
   .logo {
@@ -438,7 +445,7 @@ body {
   }
   .min-nav-wrap .nav-min-lv1 {
     position: fixed;
-    top: 84px;
+    top: 70px;
     left: 0;
     display: none;
     width: 100%;
@@ -479,15 +486,12 @@ body {
     height: 34px;
   }
   .single-nav {
-    line-height: 84px;
+    line-height: 70px;
     display: block;
-    height: 84px;
+    height: 70px;
     opacity: .9;
     color: #fff;
     background-color: #000;
-  }
-  .video-wrap {
-    margin-top: 83px;
   }
   .product-mod {
     margin-bottom: 40px;
@@ -522,7 +526,7 @@ body {
     display: none;
   }
   .product-mod .video-wrap {
-    margin-top: 84px;
+    margin-top: 70px;
   }
 }
 
