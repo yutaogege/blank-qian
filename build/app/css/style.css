@@ -110,8 +110,8 @@ At the bottom of this section, we provide information about the spritesheet itse
 $spritesheet: width height image $spritesheet-sprites;
 */
 @font-face {
-  font-family: "flatline";
-  src: url("../fonts/flatline.eot?db50pw#iefix") format("embedded-opentype"), url("../fonts/flatline.ttf?db50pw") format("truetype"), url("../fonts/flatline.woff?db50pw") format("woff"), url("../fonts/flatline.svg?db50pw#icomoon") format("svg");
+  font-family: "typewcond_bold";
+  src: url("../fonts/typewcond_bold.eot?db50pw#iefix") format("embedded-opentype"), url("../fonts/typewcond_bold.ttf?db50pw") format("truetype"), url("../fonts/typewcond_bold.woff?db50pw") format("woff"), url("../fonts/typewcond_bold.svg?db50pw#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -215,7 +215,7 @@ body {
 }
 
 .nav-lv1 > li:hover .nav-lv2 li {
-  margin-right: 0px;
+  margin-right: 0;
   opacity: 1;
 }
 
@@ -229,9 +229,9 @@ body {
 .nav-lv2 li {
   display: inline-block;
   margin-right: -30px;
-  opacity: 0;
   -webkit-transition: all .2s ease-in-out .1s;
   transition: all .2s ease-in-out .1s;
+  opacity: 0;
 }
 
 .nav-lv2 a {
@@ -268,10 +268,11 @@ body {
 
 .banner {
   width: 100%;
-  height: 200px;
-  background-size: 100%;
-  background-position: center;
   margin-top: 69px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .video-wrap {
@@ -308,7 +309,74 @@ body {
   background-size: 100%;
 }
 
+.product-mod-pc {
+  width: 1200px;
+  overflow-x: auto;
+  margin: 0 auto 120px;
+  padding-bottom: 16px;
+}
+
+.product-mod-pc .product-title {
+  width: 235px;
+  height: 40px;
+  margin-bottom: 42px;
+  margin-left: 80px;
+  background-image: url(../images/title-products.png);
+}
+
+.product-mod-pc .list-box {
+  padding-top: 20px;
+  background: url(../images/border-line.png) top center no-repeat;
+  color: #131212;
+}
+
+.product-mod-pc .list-box li {
+  padding: 42px 60px;
+  background-color: red;
+  background: url(../images/border-line.png) bottom center no-repeat;
+}
+
+.product-mod-pc .list-box li p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.product-mod-pc .list-box .img-wrap {
+  width: 480px;
+}
+
+.product-mod-pc .list-box .mesg {
+  position: relative;
+  width: 460px;
+  padding: 0 20px;
+}
+
+.product-mod-pc .list-box .mesg a {
+  float: right;
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #000;
+}
+
+.product-mod-pc .list-box .mesg h2 {
+  font-family: typewcond_bold;
+  font-size: 32px;
+}
+
+.product-mod-pc .list-box .left {
+  float: left;
+  margin-right: 100px;
+}
+
+.product-mod-pc .list-box .right {
+  float: right;
+}
+
 .product-mod {
+  display: none;
   margin-bottom: 120px;
   padding-bottom: 16px;
   text-align: center;
@@ -351,11 +419,11 @@ body {
 
 .product-mod .p-detail {
   position: relative;
+  overflow: hidden;
   width: 299px;
   height: 234px;
   margin-bottom: 26px;
   border-right: 1px solid #c9c9c9;
-  overflow: hidden;
 }
 
 .product-mod .p-detail.first {
@@ -493,6 +561,12 @@ body {
     color: #fff;
     background-color: #000;
   }
+  .product-mod-pc {
+    width: 100%;
+  }
+  .product-mod-pc .product-title {
+    margin: 0 auto 42px;
+  }
   .product-mod {
     margin-bottom: 40px;
   }
@@ -512,6 +586,10 @@ body {
   .product-mod .p-detail {
     width: auto;
     border-right: none;
+  }
+  .product-mod .p-detail.first {
+    width: auto;
+    border-left: none;
   }
   .product-mod .p-detail.b-left {
     border-right: none;

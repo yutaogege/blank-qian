@@ -19,10 +19,13 @@ $(function() {
 
     function video_set() {
         var _videoBox = $('.video-wrap'),
+            _banner = $('.banner'),
             wHeight = $(window).height(),
             wWidth = $(window).width(),
-            reHeight = wHeight - parseInt(_videoBox.css('marginTop')) + 'px',
+            reHeight = wHeight - parseInt(_banner.css('marginTop')) + 'px',
             wRate = parseInt(wWidth) / parseInt(reHeight) > 1280 / 720;
+
+        _banner.height(reHeight);
 
         if (wWidth < 610) {
             _videoBox.height('200px');
@@ -34,7 +37,7 @@ $(function() {
             _videoBox.height(reHeight);
 
             _videoBox.find('video').css({
-                'height': wRate ? 'auto' : reHeight,
+                'height': wRate ? 'auto' : wHeight,
                 'width': !wRate ? 'auto' : wWidth
             })
         }

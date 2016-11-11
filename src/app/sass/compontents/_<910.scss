@@ -65,7 +65,16 @@
     .video-wrap {
         // margin-top: $nav-height - 1px;
     }
+
+    .product-mod-pc {
+        width:100%;
+        .product-title {
+            margin:0 auto 42px;
+        }
+    }
+
     .product-mod {
+        // display:block;
         margin-bottom: 40px;
         .list-box {
             position: static;
@@ -83,6 +92,10 @@
         .p-detail {
             width: auto;
             border-right: none;
+            &.first{
+                width:auto;
+                border-left:none;
+            }
             &.b-left {
                 border-right: none;
             }

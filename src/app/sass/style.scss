@@ -102,7 +102,7 @@ $nav-height: 70px;
                     .nav-lv2 {
                         right: 0;
                         li {
-                            margin-right: 0px;
+                            margin-right: 0;
                             opacity: 1;
                         }
                     }
@@ -117,8 +117,8 @@ $nav-height: 70px;
             li {
                 display: inline-block;
                 margin-right: -30px;
-                opacity: 0;
                 transition: all .2s ease-in-out .1s;
+                opacity: 0;
             }
             a {
                 color: #706e6e;
@@ -157,11 +157,12 @@ $nav-height: 70px;
 // banner
 .banner {
     width: 100%;
-    height:200px;
-    // background-image: url(../images/banner-pc.jpeg);
-    background-size:100%;
-    background-position:center;
     margin-top: $nav-height - 1px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-image: url(../images/banner-pc.jpeg);
+    background-size: 100%;
 }
 
 // video
@@ -202,8 +203,66 @@ $nav-height: 70px;
     }
 }
 
-// 产品列表
+// 产品列表pc
+.product-mod-pc {
+    width: 1200px;
+    overflow-x:auto;
+    margin: 0 auto 120px;
+    padding-bottom: 16px;
+    .product-title {
+        width: 235px;
+        height: 40px;
+        margin-bottom: 42px;
+        margin-left: 80px;
+        background-image: url(../images/title-products.png);
+    }
+    .list-box {
+        padding-top: 20px;
+        background: url(../images/border-line.png) top center no-repeat;
+        color:#131212;
+        li {
+            padding:42px 60px;
+            background-color: red;
+            background: url(../images/border-line.png) bottom center no-repeat;
+            p {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        .img-wrap{
+            width:480px;
+        }
+        .mesg{
+            position: relative;
+            width: 460px;
+            padding: 0 20px;
+            a {
+                float:right;
+                width:120px;
+                height:38px;
+                line-height:38px;
+                text-align:center;
+                font-size:14px;
+                border:1px solid #000;
+            }
+            h2{
+                font-family: typewcond_bold;
+                font-size: 32px;
+            }
+        }
+        .left{
+            float:left;
+            margin-right:100px;
+        }
+        .right{
+            float:right;
+        }
+    }
+}
+
+// 产品列表mob
 .product-mod {
+    display: none;
     margin-bottom: 120px;
     padding-bottom: 16px;
     text-align: center;
@@ -241,11 +300,11 @@ $nav-height: 70px;
     }
     .p-detail {
         position: relative;
+        overflow: hidden;
         width: 299px;
         height: 234px;
         margin-bottom: 26px;
         border-right: 1px solid #c9c9c9;
-        overflow: hidden;
         &.first {
             width: 298px;
             border-left: 1px solid #c9c9c9;
