@@ -1,1 +1,36 @@
-header 我是页头
+//- 导航
+div.header
+	div.header-wrap
+		div.logo: a(href="index.html").logo-pic
+		ul.nav.nav-lv1
+			li: a.single-nav(href="index.html") HOME
+				span.line
+			li
+				a.single-nav(href="#") PRODUCTS
+					span.line
+				div.nav-mask
+				ul.nav-lv2.n-products
+					li: a(href="cleansing.html") ONE STEP CLEANSING PAD
+					li: a(href="primer.html") WATER SHINE PRIMER
+					li: a(href="foundation.html") ESSENCEMESH FOUNDATION
+			//- li
+			//- 	a.single-nav(href="#") BRAND
+			//- 		span.line
+				//- div.nav-mask
+				//- ul.nav-lv2.n-brand
+				//- 	li: a(href="#") nav11111
+				//- 	li: a(href="#") nav2222
+				//- 	li: a(href="#") nav3333
+			li
+				a.single-nav.last(href="javascript:;") CONTANT
+					span.line
+				div.nav-mask
+				ul.nav-lv2.n-brand
+					li: a(href="javascript:;") ME@blank-me.co.kr
+		div.min-nav-wrap
+			a.min-nav-btn.J_nav_btn(href="javascript:;")
+			ul.nav.nav-min-lv1
+				li: a.single-nav(href="index.html") HOME
+				li: a.single-nav(href="#jump") PRODUCTS
+				//- li: a.single-nav(href="#") BRAND
+				li.last: a.single-nav(href="javascript:;") CONTANT: ME@blank-me.co.kr

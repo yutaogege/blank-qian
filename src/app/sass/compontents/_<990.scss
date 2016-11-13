@@ -1,0 +1,44 @@
+@media only screen and (max-width:990px) {
+    .product-mod {
+        width: 100%;
+        .product-title {
+            margin: 0 auto 42px;
+        }
+        .list-box {
+            li {
+                padding: 42px 0 62px;
+                p {
+                    display: none;
+                }
+            }
+            .img-wrap {
+                width: auto;
+                display: block;
+                margin: 0 auto;
+                max-width: 480px;
+            }
+            img {
+                width: 100%;
+            }
+            .mesg {
+                width: auto;
+                a {
+                    float: none;
+                    display: block;
+                    margin:30px auto 10px;
+                }
+                h2 {
+                    text-align: center;
+                    float: none;
+                }
+            }
+            .left {
+                float: none;
+                margin-right: auto;
+            }
+            .right {
+                float: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+extends ./layout/layout
+append head
+	title Blank ME
+	link(rel='stylesheet',href='css/style.css')
+block content
+	//- 详情页
+	div.detail-page
+		div: img(src='./images/cleansing/cleansing_01.jpg')
+		div: img(src='./images/cleansing/cleansing_02.jpg')
+		div: img(src='./images/cleansing/cleansing_03.jpg')
+		div: img(src='./images/cleansing/cleansing_04.jpg')
+		div: img(src='./images/cleansing/cleansing_05.jpg')
+		div: img(src='./images/cleansing/cleansing_06.jpg')
+		div: img(src='./images/cleansing/cleansing_07.jpg')
+		div: img(src='./images/cleansing/cleansing_08.jpg')
+		div: img(src='./images/cleansing/cleansing_09.jpg')
+
+
+block script
+	//- script(src='//code.jquery.com/jquery-1.11.0.min.js')
+	script.
+		window.jQuery || document.write('<script src="./js/jquery-1.9.1.js" type="text/javascript"><\/script>');
+	script(src='./js/index.js')

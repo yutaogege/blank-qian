@@ -10,4 +10,12 @@
     .min-nav-btn {
         // right: 25px;
     }
+    .banner {
+        &.pc {
+            display: none;
+        }
+        &.mob {
+            display: block;
+        }
+    }
 }

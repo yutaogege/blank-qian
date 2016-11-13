@@ -10,6 +10,9 @@
     .logo {
         // margin-top: 22px;
         margin-left: 30px;
+        &:after {
+            background-image: url(../images/logo-right03.png);
+        }
     }
     .nav-lv1 {
         display: none;
@@ -64,57 +67,13 @@
     }
     .video-wrap {
         // margin-top: $nav-height - 1px;
-    }
-
-    .product-mod-pc {
-        width:100%;
-        .product-title {
-            margin:0 auto 42px;
+        .video-mask{
+            // display:none;
+            background-size: 40%;
         }
-    }
-
-    .product-mod {
-        // display:block;
-        margin-bottom: 40px;
-        .list-box {
-            position: static;
-            height: auto;
-        }
-        .list-wrap {
-            position: static;
-            width: auto;
-            margin-left: auto;
-            li {
-                width: 100%;
-                border-bottom: 1px solid #c9c9c9;
-            }
-        }
-        .p-detail {
-            width: auto;
-            border-right: none;
-            &.first{
-                width:auto;
-                border-left:none;
-            }
-            &.b-left {
-                border-right: none;
-            }
-        }
-        li {
-            &.b-first {
-                border-top: none;
-            }
-            &:last-of-type {
-                border-bottom: none;
-            }
-        }
-        .p-show {
-            &:hover {
-                display: none;
-            }
-        }
-        .video-wrap {
-            margin-top: $nav-height;
+        .play{
+            display:block;
+            background-size: 60%;
         }
     }
 }

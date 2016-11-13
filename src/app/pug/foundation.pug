@@ -1,0 +1,25 @@
+extends ./layout/layout
+append head
+	title Blank ME
+	link(rel='stylesheet',href='css/style.css')
+block content
+
+	//- 详情页
+	div.detail-page
+		div: img(src='./images/foundation/foundation_01.jpg')
+		div: img(src='./images/foundation/foundation_02.jpg')
+		div: img(src='./images/foundation/foundation_03.jpg')
+		div: img(src='./images/foundation/foundation_04.jpg')
+		div: img(src='./images/foundation/foundation_05.jpg')
+		div: img(src='./images/foundation/foundation_06.jpg')
+		div: img(src='./images/foundation/foundation_07.jpg')
+		div: img(src='./images/foundation/foundation_08.jpg')
+		div: img(src='./images/foundation/foundation_09.jpg')
+		div: img(src='./images/foundation/foundation_10.jpg')
+
+
+block script
+	//- script(src='//code.jquery.com/jquery-1.11.0.min.js')
+	script.
+		window.jQuery || document.write('<script src="./js/jquery-1.9.1.js" type="text/javascript"><\/script>');
+	script(src='./js/index.js')

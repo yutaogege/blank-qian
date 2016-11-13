@@ -34,7 +34,11 @@ module.exports = {
         video:{
             src: `${src}/source/**/*`,
             dest: `${dest}/source/`
-        }
+        },
+        // images:{
+        //     src: `${src}/images/**/*`,
+        //     dest: `${dest}/images/`
+        // }
     },
     sass: {
         src: `${src}/sass/**/*.scss`,
