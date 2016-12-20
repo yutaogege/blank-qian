@@ -3,9 +3,9 @@
         // width: 100px;
         // margin-top: 25.4px;
         // margin-left: 25px;
-        // &:after {
-        //     display: none;
-        // }
+        &:after {
+            display: none;
+        }
     }
     .min-nav-btn {
         // right: 25px;
@@ -16,6 +16,25 @@
         }
         &.mob {
             display: block;
+        }
+    }
+    .video-wrap .play{
+        right:25px;
+        bottom: 15px;
+    }
+    .footer{
+        padding: 16px;
+        font-size: 14px;
+        p{
+            width:80%;
+            margin:0 auto;
+        }
+    }
+    .nav-min-lv1{
+        li{
+            &:first-child{
+                display:none;
+            }
         }
     }
 }

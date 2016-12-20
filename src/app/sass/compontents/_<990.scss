@@ -1,6 +1,14 @@
+@media only screen and (max-width:1140px) {
+    .product-mod {
+        .product-title {
+            margin-left:20px;
+        }
+    }
+}
 @media only screen and (max-width:990px) {
     .product-mod {
         width: 100%;
+        margin:50px auto 40px;
         .product-title {
             margin: 0 auto 42px;
         }
@@ -30,6 +38,7 @@
                 h2 {
                     text-align: center;
                     float: none;
+                    font-size:28px;
                 }
             }
             .left {
